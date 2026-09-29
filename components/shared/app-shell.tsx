@@ -4,13 +4,16 @@ import * as React from "react";
 import { Header } from "./header";
 import { CommandPalette } from "./command-palette";
 import { AddCompanyModal } from "./add-company-modal";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const router = useRouter();
+  const pathname = usePathname();
   const [commandOpen, setCommandOpen] = React.useState(false);
   const [addCompanyOpen, setAddCompanyOpen] = React.useState(false);
   const [isRefreshing, setIsRefreshing] = React.useState(false);
+
+  const isHome = pathname === "/";
 
   const handleRefreshAll = async () => {
     setIsRefreshing(true);
@@ -26,14 +29,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-bg text-text antialiased selection:bg-accent/20">
-      <Header
-        onOpenCommand={() => setCommandOpen(true)}
-        onAddCompany={() => setAddCompanyOpen(true)}
-        isRefreshing={isRefreshing}
-        onRefreshAll={handleRefreshAll}
-      />
+      {!isHome && (
+        <Header
+          onOpenCommand={() => setCommandOpen(true)}
+          onAddCompany={() => setAddCompanyOpen(true)}
+          isRefreshing={isRefreshing}
+          onRefreshAll={handleRefreshAll}
+        />
+      )}
 
-      <main className="flex-1 w-full pb-16">{children}</main>
+      <main className="flex-1 w-full">{children}</main>
 
       <CommandPalette
         open={commandOpen}
