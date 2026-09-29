@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #FAFAF9;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F2;
+  --border: #E7E7E4;
+  --border-strong: #D6D6D2;
+  --text: #0B0B0C;
+  --text-muted: #6E6E6A;
+  --text-faint: #A1A19C;
+  --accent: #2A5CFF;
+  --ink: #0B0B0C;
+  --ink-text: #FFFFFF;
+
+  /* Signal tokens */
+  --signal-funding: #14B8A6;
+  --signal-hiring: #2563EB;
+  --signal-leadership: #8B5CF6;
+  --signal-product: #EC4899;
+  --signal-expansion: #F59E0B;
+  --signal-noise: #A1A19C;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg: #0A0A0B;
+  --surface: #111113;
+  --surface-2: #18181B;
+  --border: #26262A;
+  --border-strong: #38383D;
+  --text: #F5F5F4;
+  --text-muted: #9A9A96;
+  --text-faint: #6E6E6A;
+  --accent: #5B82FF;
+  --ink: #F5F5F4;
+  --ink-text: #0A0A0B;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-ink: var(--ink);
+  --color-ink-text: var(--ink-text);
+
+  --color-signal-funding: var(--signal-funding);
+  --color-signal-hiring: var(--signal-hiring);
+  --color-signal-leadership: var(--signal-leadership);
+  --color-signal-product: var(--signal-product);
+  --color-signal-expansion: var(--signal-expansion);
+  --color-signal-noise: var(--signal-noise);
+
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+* {
+  border-color: var(--border);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tabular figures for data, numbers, scores */
+.font-mono, [data-tabular] {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" on, "lnum" on;
+}
+
+/* Hairline border utility */
+.border-hairline {
+  border-width: 1px;
+  border-color: var(--border);
+}
+
+/* Subtle focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
