@@ -140,12 +140,19 @@ export function InteractiveHeroDeck({ companies }: InteractiveHeroDeckProps) {
                   {comp.score?.reasoning || "High actionability trigger detected."}
                 </p>
 
-                <div className="mt-2.5 flex items-center gap-2">
-                  {comp.topSignal && (
-                    <SignalPill type={topSignalType} label={comp.topSignal.type} />
-                  )}
-                  <span className="font-mono text-[10px] text-text-faint">
-                    {comp.person?.role}
+                <div className="mt-2.5 pt-2 border-t border-hairline/60 flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5 flex-shrink-0">
+                    {comp.topSignal && (
+                      <SignalPill type={topSignalType} label={comp.topSignal.type} />
+                    )}
+                  </div>
+                  <span className="font-mono text-[11px] text-text-muted truncate">
+                    <span className="text-text-faint font-medium">Contact:</span>{" "}
+                    <span className="text-text font-medium">
+                      {comp.person?.name
+                        ? `${comp.person.name} (${comp.person.role})`
+                        : comp.person?.role || "Head of Operations"}
+                    </span>
                   </span>
                 </div>
               </div>

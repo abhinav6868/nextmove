@@ -76,11 +76,15 @@ export function CompanyView({ company }: CompanyViewProps) {
   const [copiedDraft, setCopiedDraft] = React.useState(false);
   const [expandedConflicts, setExpandedConflicts] = React.useState<Record<string, boolean>>({});
 
-  const latestSnapshot = company.snapshots[0];
+  // Ensure snapshots are strictly sorted newest first so latestSnapshot is ALWAYS the latest state
+  const sortedSnapshots = [...company.snapshots].sort(
+    (a, b) => new Date(b.captured_at).getTime() - new Date(a.captured_at).getTime()
+  );
+  const latestSnapshot = sortedSnapshots[0];
   const extracted = (latestSnapshot?.extracted || {}) as Record<string, unknown>;
   const sourceMap = (latestSnapshot?.source_map || {}) as Record<
     string,
-    { source_url?: string; tier?: number; date?: string; alternatives?: Array<{ value: string; tier: number; date?: string; label?: string; status: string }> }
+    { source_url?: string; tier?: number; date?: string; alternatives?: Array<{ value: string; tier: number; date?: string; label?: string; status: string; source_url?: string }> }
   >;
 
   const handleCopy = () => {
@@ -232,10 +236,15 @@ export function CompanyView({ company }: CompanyViewProps) {
                   <span className="text-[15px] font-semibold text-text">
                     {extracted.employee_count ? `${extracted.employee_count} employees` : company.size_band}
                   </span>
-                  <ConfidenceDot level="high" showText={false} />
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium">
+                      Used
+                    </span>
+                    <ConfidenceDot level="high" showText={false} />
+                  </div>
                 </div>
                 <div className="mt-1 text-[11px] font-mono text-text-muted">
-                  Tier 1 · Sep 2026 · Official site
+                  Tier 1 · Official site & careers disclosures
                 </div>
 
                 {/* Conflict / Alternative values expander */}
@@ -246,7 +255,7 @@ export function CompanyView({ company }: CompanyViewProps) {
                       className="text-[11px] text-text-muted hover:text-text font-mono inline-flex items-center gap-1 cursor-pointer"
                     >
                       <span>
-                        {expandedConflicts["size_band"] ? "Hide" : "Other values (1)"}
+                        {expandedConflicts["size_band"] ? "Hide" : `Other values (${sourceMap.size_band.alternatives.length})`}
                       </span>
                       <ChevronDown
                         className={cn(
@@ -259,9 +268,11 @@ export function CompanyView({ company }: CompanyViewProps) {
                     {expandedConflicts["size_band"] && (
                       <div className="mt-1.5 p-2 rounded bg-surface border border-hairline text-[11px] font-mono text-text-muted space-y-1">
                         {sourceMap.size_band.alternatives.map((alt, i) => (
-                          <div key={i}>
+                          <div key={i} className="flex items-center justify-between">
                             <span className="text-text font-medium">{alt.value}</span>{" "}
-                            <span>({alt.label || "press release"}, {alt.date}, {alt.status})</span>
+                            <span className="text-text-faint">
+                              ({alt.label || "press release"}, {alt.date}, <span className="text-amber-600 dark:text-amber-400 font-medium">{alt.status}</span>)
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -281,11 +292,49 @@ export function CompanyView({ company }: CompanyViewProps) {
                       ? `${(extracted.latest_round as { round: string; amount: string }).round} (${(extracted.latest_round as { round: string; amount: string }).amount})`
                       : company.stage}
                   </span>
-                  <ConfidenceDot level="high" showText={false} />
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium">
+                      Used
+                    </span>
+                    <ConfidenceDot level="high" showText={false} />
+                  </div>
                 </div>
                 <div className="mt-1 text-[11px] font-mono text-text-muted">
-                  Tier 2 · TechCrunch & Crunchbase filings
+                  Tier 2 · Primary tech press & verified filings
                 </div>
+
+                {/* Conflict / Alternative values expander for Stage */}
+                {sourceMap.stage?.alternatives && sourceMap.stage.alternatives.length > 0 && (
+                  <div className="mt-2 pt-2 border-t border-hairline">
+                    <button
+                      onClick={() => toggleConflict("stage")}
+                      className="text-[11px] text-text-muted hover:text-text font-mono inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>
+                        {expandedConflicts["stage"] ? "Hide" : `Other values (${sourceMap.stage.alternatives.length})`}
+                      </span>
+                      <ChevronDown
+                        className={cn(
+                          "w-3 h-3 transition-transform",
+                          expandedConflicts["stage"] && "rotate-180"
+                        )}
+                      />
+                    </button>
+
+                    {expandedConflicts["stage"] && (
+                      <div className="mt-1.5 p-2 rounded bg-surface border border-hairline text-[11px] font-mono text-text-muted space-y-1">
+                        {sourceMap.stage.alternatives.map((alt, i) => (
+                          <div key={i} className="flex items-center justify-between">
+                            <span className="text-text font-medium">{alt.value}</span>{" "}
+                            <span className="text-text-faint">
+                              ({alt.label || "historical round"}, {alt.date}, <span className="text-amber-600 dark:text-amber-400 font-medium">{alt.status}</span>)
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
 

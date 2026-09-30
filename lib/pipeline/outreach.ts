@@ -49,7 +49,10 @@ export function generateOutreachDraft(input: OutreachInput): OutreachDraft {
   // 2. Persona-Specific Operational Bottleneck (Sentence 2)
   let rawPain = input.likelyPains && input.likelyPains.length > 0 ? input.likelyPains[0] : "workflow friction across scaling tools";
   // Clean up initial capital letter in pain phrase for grammatical embedding
-  const pain = rawPain.charAt(0).toLowerCase() + rawPain.slice(1);
+  let pain = rawPain.charAt(0).toLowerCase() + rawPain.slice(1);
+  if (pain.startsWith("manual ")) {
+    pain = pain.replace(/^manual\s+/, "");
+  }
 
   let valueSentence = "";
   if (/ops|operation|chief of staff/i.test(roleLower)) {

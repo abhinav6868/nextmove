@@ -404,7 +404,17 @@
         "stage": {
           "date": "2026-09",
           "tier": 1,
-          "source_url": "https://sprinto.com"
+          "source_url": "https://sprinto.com",
+          "alternatives": [
+            {
+              "value": "Series A ($10M)",
+              "tier": 2,
+              "date": "2024-02-15",
+              "label": "historical round",
+              "status": "superseded",
+              "source_url": "https://sprinto.com/press"
+            }
+          ]
         },
         "size_band": {
           "date": "2026-09",
@@ -535,7 +545,17 @@
         "stage": {
           "date": "2026-09",
           "tier": 1,
-          "source_url": "https://rocketlane.com"
+          "source_url": "https://rocketlane.com",
+          "alternatives": [
+            {
+              "value": "Series A ($18M)",
+              "tier": 2,
+              "date": "2023-11-10",
+              "label": "historical round",
+              "status": "superseded",
+              "source_url": "https://rocketlane.com/press"
+            }
+          ]
         },
         "size_band": {
           "date": "2026-09",
@@ -662,7 +682,17 @@
         "stage": {
           "date": "2026-09",
           "tier": 1,
-          "source_url": "https://kula.ai"
+          "source_url": "https://kula.ai",
+          "alternatives": [
+            {
+              "value": "Seed ($2.7M)",
+              "tier": 2,
+              "date": "2023-01-12",
+              "label": "historical round",
+              "status": "superseded",
+              "source_url": "https://kula.ai/press"
+            }
+          ]
         },
         "size_band": {
           "date": "2026-09",
@@ -906,7 +936,17 @@
         "stage": {
           "date": "2026-09",
           "tier": 1,
-          "source_url": "https://barraiser.com"
+          "source_url": "https://barraiser.com",
+          "alternatives": [
+            {
+              "value": "Seed ($1.5M)",
+              "tier": 2,
+              "date": "2023-04-10",
+              "label": "historical round",
+              "status": "superseded",
+              "source_url": "https://barraiser.com/press"
+            }
+          ]
         },
         "size_band": {
           "date": "2026-09",
@@ -1033,7 +1073,17 @@
         "stage": {
           "date": "2026-09",
           "tier": 1,
-          "source_url": "https://privado.ai"
+          "source_url": "https://privado.ai",
+          "alternatives": [
+            {
+              "value": "Seed ($3.5M)",
+              "tier": 2,
+              "date": "2023-02-18",
+              "label": "historical round",
+              "status": "superseded",
+              "source_url": "https://privado.ai/press"
+            }
+          ]
         },
         "size_band": {
           "date": "2026-09",
@@ -1160,7 +1210,17 @@
         "stage": {
           "date": "2026-09",
           "tier": 1,
-          "source_url": "https://devtron.ai"
+          "source_url": "https://devtron.ai",
+          "alternatives": [
+            {
+              "value": "Seed ($2.5M)",
+              "tier": 2,
+              "date": "2022-10-05",
+              "label": "historical round",
+              "status": "superseded",
+              "source_url": "https://devtron.ai/press"
+            }
+          ]
         },
         "size_band": {
           "date": "2026-09",
@@ -1282,7 +1342,17 @@
         "stage": {
           "date": "2026-09",
           "tier": 1,
-          "source_url": "https://superops.com"
+          "source_url": "https://superops.com",
+          "alternatives": [
+            {
+              "value": "Series A ($14M)",
+              "tier": 2,
+              "date": "2024-01-20",
+              "label": "historical round",
+              "status": "superseded",
+              "source_url": "https://superops.com/press"
+            }
+          ]
         },
         "size_band": {
           "date": "2026-09",
@@ -1653,7 +1723,17 @@
         "stage": {
           "date": "2026-09",
           "tier": 1,
-          "source_url": "https://murf.ai"
+          "source_url": "https://murf.ai",
+          "alternatives": [
+            {
+              "value": "Seed ($1.5M)",
+              "tier": 2,
+              "date": "2022-08-15",
+              "label": "historical round",
+              "status": "superseded",
+              "source_url": "https://murf.ai/press"
+            }
+          ]
         },
         "size_band": {
           "date": "2026-09",
@@ -3277,7 +3357,7 @@
       "reach": 92,
       "confidence": "0.92",
       "total": 92,
-      "reasoning": "Raised $20M Series B 6 weeks ago; hiring 3 operations & automation roles; Identified Girish Redekar (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru, India."
+      "reasoning": "Raised $20M Series B in August 2026; hiring 3 operations & automation roles; Target: Raghuveer K (Co-Founder & CTO); Matches ICP: Series B with 50-200 in Bengaluru, India."
     },
     {
       "id": 18,
@@ -3288,7 +3368,7 @@
       "reach": 88,
       "confidence": "0.90",
       "total": 88,
-      "reasoning": "Announced $24M Series B; hired VP of Engineering and recruiting Customer Ops lead; Identified Srikrishnan Ganesan (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Chennai / Bengaluru, India."
+      "reasoning": "Announced $24M Series B; hired VP of Engineering and recruiting Customer Ops lead; Target: Deepak Balasubramanyam (Co-Founder & CTO); Matches ICP: Series B with 50-200 in Chennai / Bengaluru, India."
     },
     {
       "id": 19,
@@ -3299,7 +3379,7 @@
       "reach": 95,
       "confidence": "0.88",
       "total": 88,
-      "reasoning": "Raised $12M Series A 30 days ago; opening US expansion office; Identified Achuthanand Ravi (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+      "reasoning": "Raised $12M Series A in August 2026; opening US expansion office; Target: Achuthanand Ravi (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
     },
     {
       "id": 20,
@@ -3310,7 +3390,7 @@
       "reach": 82,
       "confidence": "0.86",
       "total": 81,
-      "reasoning": "Hiring 2 ops strategy leads; recent expansion into SEA enterprises; Identified Adit Jain (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru, India."
+      "reasoning": "Hiring 2 ops strategy leads; recent expansion into SEA enterprises; Target: VP of Global Operations; Matches ICP: Series B with 50-200 in Bengaluru, India."
     },
     {
       "id": 21,
@@ -3321,7 +3401,7 @@
       "reach": 85,
       "confidence": "0.85",
       "total": 82,
-      "reasoning": "Fresh Series A round announced 3 weeks ago; recruiting community ops lead; Identified Avnish Anand (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+      "reasoning": "Fresh Series A round announced in September 2026; recruiting community ops lead; Target: Head of Community Operations; Matches ICP: Series A with 20-50 in Bengaluru, India."
     },
     {
       "id": 22,
@@ -3332,7 +3412,7 @@
       "reach": 90,
       "confidence": "0.88",
       "total": 82,
-      "reasoning": "Series A expansion; launched open-source GitHub privacy action; Identified Vaibhav Antil (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+      "reasoning": "Series A expansion; launched open-source GitHub privacy action; Target: Vaibhav Antil (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
     },
     {
       "id": 23,
@@ -3343,7 +3423,7 @@
       "reach": 88,
       "confidence": "0.84",
       "total": 79,
-      "reasoning": "Series A announced August 2026; hiring cloud support engineers; Identified Prashant Ghildiyal (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+      "reasoning": "Series A announced August 2026; hiring cloud support engineers; Target: Nishant Kumar (Co-Founder & CTO); Matches ICP: Series A with 20-50 in Bengaluru, India."
     },
     {
       "id": 24,
@@ -3354,7 +3434,7 @@
       "reach": 84,
       "confidence": "0.87",
       "total": 80,
-      "reasoning": "Revenue ops hiring surge following Series B close; Identified Arvind Parthiban (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru / Chennai, India."
+      "reasoning": "Revenue ops hiring surge following Series B close; Target: Head of Customer Support Ops; Matches ICP: Series B with 50-200 in Bengaluru / Chennai, India."
     },
     {
       "id": 25,
@@ -3365,7 +3445,7 @@
       "reach": 82,
       "confidence": "0.85",
       "total": 76,
-      "reasoning": "Global expansion into MEA; scaling enterprise onboarding ops; Identified Ankit Ratan (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru, India."
+      "reasoning": "Global expansion into MEA; scaling enterprise onboarding ops; Target: VP of Client Operations; Matches ICP: Series B with 50-200 in Bengaluru, India."
     },
     {
       "id": 26,
@@ -3376,7 +3456,7 @@
       "reach": 85,
       "confidence": "0.82",
       "total": 75,
-      "reasoning": "Launched automated CRM sync v2; expanding data integrations; Identified Rishen Kapoor (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+      "reasoning": "Launched automated CRM sync v2; expanding data integrations; Target: Ruchin Kulkarni (Co-Founder); Matches ICP: Series A with 20-50 in Bengaluru, India."
     },
     {
       "id": 27,
@@ -3387,7 +3467,7 @@
       "reach": 80,
       "confidence": "0.81",
       "total": 71,
-      "reasoning": "Enterprise voice cloning launch; hiring support ops; Identified Sneha Roy (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+      "reasoning": "Enterprise voice cloning launch; hiring support ops; Target: Head of Customer Experience; Matches ICP: Series A with 20-50 in Bengaluru, India."
     },
     {
       "id": 28,
@@ -3398,7 +3478,7 @@
       "reach": 82,
       "confidence": "0.80",
       "total": 70,
-      "reasoning": "Merchant base doubled; scaling support automation; Identified Arjun Rasquinha (Co-Founder & CEO); Matches ICP: Seed with 20-50 in Bengaluru, India."
+      "reasoning": "Merchant base doubled; scaling support automation; Target: Arjun Rasquinha (Co-Founder & CEO); Matches ICP: Seed with 20-50 in Bengaluru, India."
     },
     {
       "id": 29,
@@ -3409,7 +3489,7 @@
       "reach": 74,
       "confidence": "0.86",
       "total": 65,
-      "reasoning": "No new funding in last 12 months; steady executive recruitment; Identified Raghu Ravinutala (Co-Founder & CEO); Matches ICP: Series C with 200-500 in Bengaluru, India."
+      "reasoning": "No new funding in last 12 months; steady executive recruitment; Target: VP of Business Operations; Matches ICP: Series C with 200-500 in Bengaluru, India."
     },
     {
       "id": 30,
@@ -3420,7 +3500,7 @@
       "reach": 60,
       "confidence": "0.90",
       "total": 52,
-      "reasoning": "Mature funding profile; no fresh capital triggers in 2026; Identified Abhinav Asthana (Co-Founder & CEO); Matches ICP: Series D with 500+ in Bengaluru, India."
+      "reasoning": "Mature funding profile; no fresh capital triggers in 2026; Target: Director of Enterprise Operations; Matches ICP: Series D with 500+ in Bengaluru, India."
     },
     {
       "id": 31,
@@ -3431,7 +3511,7 @@
       "reach": 75,
       "confidence": "0.82",
       "total": 66,
-      "reasoning": "Expanding AI video models; hiring systems engineers; Identified Sanket Shah (Co-Founder & CEO); Matches ICP: Series A with 50-200 in Bengaluru / Mumbai, India."
+      "reasoning": "Expanding AI video models; hiring systems engineers; Target: Head of Infrastructure Operations; Matches ICP: Series A with 50-200 in Bengaluru / Mumbai, India."
     }
   ],
   "outreach": [
@@ -3440,9 +3520,9 @@
       "company_id": 1,
       "person_id": 1,
       "trigger_signal_id": 1,
-      "draft": "Hi team,\n\nNoticed Hasura's Hiring for 2 roles including Senior Operations Manager, AI Automation Engineer. When teams expand this phase, manual data and workflow friction typically slow down head of operations / chief of staff priorities like Manual operational coordination across expanding customer onboarding pipelines. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
-      "why_note": "Head of Operations / Chief of Staff owns the specific operational bottlenecks created by the recent hiring trigger.",
-      "created_at": "2026-09-29T07:39:51.675Z"
+      "draft": "Hi team,\n\nNoticed Hasura recently opened key operational and automation roles to support expanding customer volume. As customer onboarding volume surges, manual coordination and operational bottlenecks across expanding onboarding pipelines typically become the primary scaling choke point. We built a lightweight automation module that pre-triages these workflows for high-growth B2B teams—worth 10 minutes next Tuesday to see if it saves your team 15+ hours a week?",
+      "why_note": "Targeting Head of Operations / Chief of Staff because they directly manage day-to-day workflow throughput and team bottlenecks impacted by recent growth, rather than high-level administrative functions.",
+      "created_at": "2026-09-30T05:41:43.070Z"
     },
     {
       "id": 17,

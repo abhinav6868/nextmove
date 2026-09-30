@@ -181,7 +181,7 @@ export default async function HomePage() {
                     16     - STAGE: Series A ($10M, Accel)
                   </div>
                   <div className="bg-green-500/10 text-green-700 dark:text-green-400 px-2 py-0.5 rounded -mx-2 font-medium">
-                    16  17 + STAGE: Series B ($20M, Accel) · ANNOUNCED 6 WEEKS AGO
+                    16  17 + STAGE: Series B ($20M, Accel) · ANNOUNCED AUGUST 2026
                   </div>
                   <div className="bg-green-500/10 text-green-700 dark:text-green-400 px-2 py-0.5 rounded -mx-2 font-medium">
                     17  18 + OPEN_ROLE: Lead Operations Manager (Operations)
@@ -189,7 +189,10 @@ export default async function HomePage() {
                   <div className="bg-green-500/10 text-green-700 dark:text-green-400 px-2 py-0.5 rounded -mx-2 font-medium">
                     18  19 + OPEN_ROLE: AI Automation Specialist (Engineering)
                   </div>
-                  <div className="text-text-muted">19  20  &gt; confidence: 0.92 (Tier 1 MCA + TechCrunch)</div>
+                  <div className="bg-green-500/10 text-green-700 dark:text-green-400 px-2 py-0.5 rounded -mx-2 font-medium">
+                    19  20 + OPEN_ROLE: Solutions Architect (Engineering)
+                  </div>
+                  <div className="text-text-muted">20  21  &gt; confidence: 0.92 (Tier 1 Careers + TechCrunch)</div>
                 </div>
               </div>
 

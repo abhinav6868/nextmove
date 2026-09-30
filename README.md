@@ -84,7 +84,7 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
 - **Implementation**: Real-time opportunity score (0–100) combining three weighted sub-scores:
   $$\text{base} = 0.35 \cdot \text{Timing} + 0.35 \cdot \text{Fit} + 0.30 \cdot \text{Reach}$$
   $$\text{total} = \text{round}\Big(\text{base} \times (0.6 + 0.4 \cdot \text{Confidence})\Big)$$
-- **Explainability**: Pure deterministic TypeScript code (`/lib/pipeline/score.ts`) calculates the score—never an opaque LLM prompt. Every account provides a single-sentence rationale (e.g., *"Raised $20M Series B 6 weeks ago; hiring 3 operations & automation roles; Identified Raghuveer K (Co-Founder & CTO); Matches ICP: Series B with 50-200 in Bengaluru, India."*).
+- **Explainability**: Pure deterministic TypeScript code (`/lib/pipeline/score.ts`) calculates the score—never an opaque LLM prompt. Every account provides a single-sentence rationale (e.g., *"Raised $20M Series B in August 2026; hiring 3 operations & automation roles; Target: Raghuveer K (Co-Founder & CTO); Matches ICP: Series B with 50-200 in Bengaluru, India."*).
 
 ---
 
@@ -135,10 +135,10 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
   - **Tier 2 (0.8)**: Primary tech press (TechCrunch, Inc42, YourStory, Entrackr).
   - **Tier 3 (0.5)**: Aggregated directories (LinkedIn Jobs, Naukri, Tracxn).
   - **Tier 4 (0.2)**: Social media announcements (X/Twitter).
-- **Conflict Rule**: Higher tier always supersedes lower tier. If two Tier 1/2 sources disagree, both values are displayed side-by-side with superseded labels and `needs_review: true`.
-- **Example in App**: On Sprinto:
-  `Headcount: 140 employees · Tier 1 (Official Careers Portal / Disclosures) · High confidence` with an expandable dropdown showing:
-  `Other values: 95 employees (historical press release, superseded)`.
+- **Conflict Rule**: Higher tier always supersedes lower tier. When sources disagree, the higher tier value is marked as **Used**, while lower-tier or outdated values are marked as **Superseded** in an expandable conflict drawer.
+- **Example in App (Sprinto)**:
+  - **Team Headcount**: Resolved to `140 employees · Tier 1 (Official Careers Portal) · Used`. Expandable drawer shows superseded historical claim: `95 employees (historical press release, superseded)`.
+  - **Stage & Capital**: Resolved to `Series B ($20M) · Tier 2 (Primary Press / Disclosures) · Used`. Expandable drawer shows superseded earlier stage: `Series A ($10M) (historical round, superseded)`.
   *(Note on Attribution: Statutory MCA filings verify authorized/paid-up capital, corporate status, and director appointments; live employee headcount is sourced from official careers portal disclosures and verified LinkedIn Insights).*
 
 ---
@@ -175,10 +175,12 @@ In contrast, **Timing decays exponentially with a 14-day half-life**. When a com
 
 ---
 
-## 5. Limits and Honest Failures
+## 5. Live Data vs. Seeded Evaluation Dataset & Honest Limits
 
-1. **Scrape Restrictions & Anti-Bot WAFs**: Cloudflare or bot protection on select company landing pages can block plain HTTP fetch requests. Nextmove handles this gracefully: falling back to search snippets, dampening data confidence from High to Low, and displaying this status transparently rather than hallucinating facts.
-2. **Demonstration Assessment Dataset**: To evaluate diffing and trigger classification on Day 1 without waiting 60 days, historical Snapshot $A$ baselines were created alongside live Snapshot $B$ records for the 16 seeded Indian B2B SaaS companies.
+1. **Live Scraping Capability vs. Seeded Evaluation**:
+   - **Live Ingestion**: The ingestion pipeline (`/lib/pipeline/research.ts` + `/lib/pipeline/extract.ts`) performs live, on-demand HTTP fetching and extraction against public URLs provided via the Command Palette (<kbd>⌘K</kbd>) or the `/api/ingest` and `/api/refresh` endpoints.
+   - **Seeded Evaluation Dataset**: To allow immediate review of temporal diffing (Task 6), reliability conflict resolution (Task 7), and scoring (Task 2) without waiting months for real companies to announce funding or change headcount, the 16 Indian B2B SaaS accounts in the initial view are seeded with paired historical ($A$) and current ($B$) snapshots derived from actual public disclosures and press reports.
+2. **Scrape Restrictions & Anti-Bot WAFs**: Cloudflare or bot protection on select company landing pages can block plain HTTP fetch requests. Nextmove handles this gracefully: falling back to search snippets, dampening data confidence from High to Low, and displaying this status transparently rather than hallucinating facts.
 3. **LinkedIn Scraping Boundaries**: Compliant with PRD non-goals, no authenticated LinkedIn scraping is performed. When named contacts are absent from public pages, only verified role titles are displayed.
 
 ---
@@ -212,7 +214,7 @@ npm install
 DATABASE_URL=postgresql://localhost:5432/nextmove
 ANTHROPIC_API_KEY=your_key_here  # Optional: Fallback heuristics run if omitted
 
-# 4. Run database migrations & seed 16 real companies
+# 4. Run database migrations & seed 16 evaluation companies
 npm run db:push
 npx tsx scripts/seed-companies.ts
 

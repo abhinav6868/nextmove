@@ -211,6 +211,43 @@ export async function getTodayRankedCompanies(limitN?: number) {
     };
   });
 
+  // Fast-path for production/offline fallback: immediate return with zero TCP socket delay
+  if (!isLiveDbAvailable) {
+    const topWithDetails = topItems.map((company, idx) => {
+      const topOutreach =
+        (fallbackData.outreach as any[]).find(
+          (o) => o.company_id === company.id
+        ) || null;
+
+      let topPerson = null;
+      if (topOutreach?.person_id) {
+        topPerson = (fallbackData.people as any[]).find(
+          (p) => p.id === topOutreach.person_id
+        );
+      }
+      if (!topPerson) {
+        topPerson =
+          (fallbackData.people as any[]).find(
+            (p) => p.company_id === company.id
+          ) || null;
+      }
+
+      return {
+        ...company,
+        rank: idx + 1,
+        person: topPerson || null,
+        outreach: topOutreach || null,
+      };
+    });
+
+    return {
+      top: topWithDetails,
+      dropped: droppedItems,
+      topN,
+      totalWatched: all.length,
+    };
+  }
+
   // Attach primary decision-maker and outreach draft for top cards
   try {
     const topWithDetails = await Promise.all(
@@ -318,7 +355,8 @@ export async function getCompanyDetail(id: number) {
 
     const companySnapshots = (fallbackData.snapshots as any[])
       .filter((s) => s.company_id === id)
-      .map((s) => ({ ...s, captured_at: new Date(s.captured_at) }));
+      .map((s) => ({ ...s, captured_at: new Date(s.captured_at) }))
+      .sort((a, b) => b.captured_at.getTime() - a.captured_at.getTime());
 
     const companySignals = (fallbackData.signals as any[])
       .filter((s) => s.company_id === id)
