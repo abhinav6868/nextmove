@@ -1,0 +1,4483 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Hasura",
+      "url": "https://hasura.io",
+      "industry": "B2B SaaS",
+      "size_band": "50-200",
+      "stage": "Series A",
+      "location": "Bengaluru, India",
+      "description": "Get startedReady to bring your AI visions to life?Our AI Catalyst Team is here to help you assess fit and partner with you to deliver real transformation - turning bold AI ambitions into measurable business impact.If you’re reaching out for",
+      "created_at": "2026-09-29T07:39:51.660Z"
+    },
+    {
+      "id": 2,
+      "name": "Sprinto",
+      "url": "https://sprinto.com",
+      "industry": "Security & Compliance SaaS",
+      "size_band": "50-200",
+      "stage": "Series B",
+      "location": "Bengaluru, India",
+      "description": "Automated security compliance and audit readiness platform for high-growth tech companies.",
+      "created_at": "2026-09-29T08:43:44.483Z"
+    },
+    {
+      "id": 3,
+      "name": "Rocketlane",
+      "url": "https://rocketlane.com",
+      "industry": "Customer Onboarding SaaS",
+      "size_band": "50-200",
+      "stage": "Series B",
+      "location": "Chennai / Bengaluru, India",
+      "description": "Collaborative customer onboarding platform purpose-built for client-facing projects.",
+      "created_at": "2026-09-29T08:43:44.504Z"
+    },
+    {
+      "id": 4,
+      "name": "Kula",
+      "url": "https://kula.ai",
+      "industry": "Recruitment Automation SaaS",
+      "size_band": "20-50",
+      "stage": "Series A",
+      "location": "Bengaluru, India",
+      "description": "Outbound recruitment automation platform helping talent teams build predictable hiring pipelines.",
+      "created_at": "2026-09-29T08:43:44.515Z"
+    },
+    {
+      "id": 5,
+      "name": "Leena AI",
+      "url": "https://leena.ai",
+      "industry": "Workforce Automation SaaS",
+      "size_band": "50-200",
+      "stage": "Series B",
+      "location": "Bengaluru, India",
+      "description": "Autonomous HR and employee service delivery platform resolving workplace queries.",
+      "created_at": "2026-09-29T08:43:44.527Z"
+    },
+    {
+      "id": 6,
+      "name": "BarRaiser",
+      "url": "https://barraiser.com",
+      "industry": "HR Tech & Interview AI",
+      "size_band": "20-50",
+      "stage": "Series A",
+      "location": "Bengaluru, India",
+      "description": "AI-powered interview platform delivering structured evaluations and interviewer guidance.",
+      "created_at": "2026-09-29T08:43:44.536Z"
+    },
+    {
+      "id": 7,
+      "name": "Privado",
+      "url": "https://privado.ai",
+      "industry": "Developer Privacy & Security",
+      "size_band": "20-50",
+      "stage": "Series A",
+      "location": "Bengaluru, India",
+      "description": "Code scanning platform discovering data privacy vulnerabilities directly in developers' CI/CD.",
+      "created_at": "2026-09-29T08:43:44.546Z"
+    },
+    {
+      "id": 8,
+      "name": "Devtron",
+      "url": "https://devtron.ai",
+      "industry": "DevOps & Kubernetes SaaS",
+      "size_band": "20-50",
+      "stage": "Series A",
+      "location": "Bengaluru, India",
+      "description": "Open source software delivery platform for Kubernetes, streamlining build, deploy, and monitor.",
+      "created_at": "2026-09-29T08:43:44.556Z"
+    },
+    {
+      "id": 9,
+      "name": "SuperOps.ai",
+      "url": "https://superops.com",
+      "industry": "IT Management SaaS",
+      "size_band": "50-200",
+      "stage": "Series B",
+      "location": "Bengaluru / Chennai, India",
+      "description": "Unified PSA and RMM software platform designed for modern managed service providers.",
+      "created_at": "2026-09-29T08:43:44.566Z"
+    },
+    {
+      "id": 10,
+      "name": "Signzy",
+      "url": "https://signzy.com",
+      "industry": "Fintech Compliance & Identity",
+      "size_band": "50-200",
+      "stage": "Series B",
+      "location": "Bengaluru, India",
+      "description": "No-code AI workflow platform for banking onboarding, fraud detection, and biometric KYC.",
+      "created_at": "2026-09-29T08:43:44.575Z"
+    },
+    {
+      "id": 11,
+      "name": "Toplyne",
+      "url": "https://toplyne.io",
+      "industry": "Sales Intelligence & PLG",
+      "size_band": "20-50",
+      "stage": "Series A",
+      "location": "Bengaluru, India",
+      "description": "Product-led sales intelligence platform identifying high-intent users inside freemium funnels.",
+      "created_at": "2026-09-29T08:43:44.583Z"
+    },
+    {
+      "id": 12,
+      "name": "Murf.ai",
+      "url": "https://murf.ai",
+      "industry": "Synthetic Audio & AI SaaS",
+      "size_band": "20-50",
+      "stage": "Series A",
+      "location": "Bengaluru, India",
+      "description": "AI speech architecture and synthetic voice generator platform for enterprise content creators.",
+      "created_at": "2026-09-29T08:43:44.591Z"
+    },
+    {
+      "id": 13,
+      "name": "Zoko",
+      "url": "https://zoko.io",
+      "industry": "WhatsApp Commerce SaaS",
+      "size_band": "20-50",
+      "stage": "Seed",
+      "location": "Bengaluru, India",
+      "description": "Centralized WhatsApp conversational commerce and support hub for Shopify e-commerce brands.",
+      "created_at": "2026-09-29T08:43:44.600Z"
+    },
+    {
+      "id": 14,
+      "name": "Yellow.ai",
+      "url": "https://yellow.ai",
+      "industry": "Conversational AI Platform",
+      "size_band": "200-500",
+      "stage": "Series C",
+      "location": "Bengaluru, India",
+      "description": "Autonomous customer service and employee experience platform with multi-LLM orchestration.",
+      "created_at": "2026-09-29T08:43:44.608Z"
+    },
+    {
+      "id": 15,
+      "name": "Postman",
+      "url": "https://postman.com",
+      "industry": "API Lifecycle Platform",
+      "size_band": "500+",
+      "stage": "Series D",
+      "location": "Bengaluru, India",
+      "description": "Universal collaborative API platform used by over 30 million developers worldwide.",
+      "created_at": "2026-09-29T08:43:44.616Z"
+    },
+    {
+      "id": 16,
+      "name": "InVideo",
+      "url": "https://invideo.io",
+      "industry": "AI Video Creation SaaS",
+      "size_band": "50-200",
+      "stage": "Series A",
+      "location": "Bengaluru / Mumbai, India",
+      "description": "Generative AI video creator transforming text prompts into studio-quality publishable video.",
+      "created_at": "2026-09-29T08:43:44.624Z"
+    }
+  ],
+  "snapshots": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "captured_at": "2026-09-29T07:39:51.667Z",
+      "raw": [
+        {
+          "url": "https://hasura.io",
+          "text": "Get startedReady to bring your AI visions to life?Our AI Catalyst Team is here to help you assess fit and partner with you to deliver real transformation - turning bold AI ambitions into measurable business impact.If you’re reaching out for anything other than a demo request, contact us here.FIRST FOR DIGITAL. NOW FOR AI.We’ve spent years perfecting products that make it effortless to access and use data.PromptQL for AIAccurate AI by continuously learning the unique context of your business.Hasura for APIs and GraphQLBattle-tested. Loved by devs. Powers millions of user experiences.© 2026 Copyright Hasura, Inc. All Rights Reserved.Contact Us|Careers",
+          "tier": 1,
+          "title": "Hasura: Creator of PromptQL, Data Delivery Network & GraphQL Engine",
+          "fetched_at": "2026-09-29T07:39:47.823Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://hasura.io/about",
+          "text": "Explore Jev WorkshopsGet hands-on with Jev. Explore faster, leaner workflows. See WorkshopsSign inRequest demoSign inRequest demoTry PromptQLOUR STORYHow it started - and where we're headedPromptQL is built by the team at Hasura — creators of the Hasura GraphQL Engine (HGE) and the Hasura Data Delivery Network (DDN), used by millions of developers and running at scale inside Fortune 100 enterprises to deliver fast, secure access to their most critical data.With PromptQL, we’re taking on the next frontier:Making AI reliable when it works with your data.Delegating work to AI with confidence, boils down to 2 problems:Shared context. AI is only as accurate as the context it’s given — and the context that matters lives in people’s heads: the definitions, the exceptions, the tribal knowledge that never makes it into a schema.Security guardrails on heterogeneous systems. Real organizations run data across dozens of systems, each with its own permissions and policies. AI has to honor every one of them, every time, or it can’t be trusted with work that matters.We had spent years building the foundation for exactly these two problems at Hasura — rich metadata that describes what data means, and secure data access enforced at the API layer. PromptQL takes that foundation to the frontier of AI.We’ve raised over $135M to unlock this vision.Multiplayer AI is the only way to solve shared context.Context can’t be extracted once and handed to AI — it changes daily and decays the moment it’s written down. The only durable answer is a flywheel: people and AI working together in the flow of work, capturing and curating context just-in-time. Correct the AI once and it sticks — for everyone. That’s why PromptQL is multiplayer: shared threads, a shared wiki, and an agent whose accuracy compounds as your team works.Security is the gate to unleashing AI.Security, privacy, and confidentiality are the biggest hurdles between organizations and what AI can actually do for them. Guardrails bolted on after the fact don’t survive contact with real systems. PromptQL enforces permissions deterministically at the data layer — every user, every source, every query — so AI works with exactly the access each person has, and nothing more.A future where humans just discuss & decide, and AI does the work is inevitable. And the only way to get there is to build multiplayer AI that teams can trust.This is PromptQL. Welcome.With gratitude,Hasura",
+          "tier": 1,
+          "title": "PromptQL | About us",
+          "fetched_at": "2026-09-29T07:39:47.823Z",
+          "source_type": "about"
+        },
+        {
+          "url": "https://hasura.io/careers",
+          "text": "Explore Jev WorkshopsGet hands-on with Jev. Explore faster, leaner workflows. See WorkshopsSign inRequest demoSign inRequest demoTry PromptQLJoin us to build the future of reliable AIAI can't be trusted if it's confidently wrong. At PromptQL, we're on a mission to deliver reasoning AI that learns from enterprise data, signals its confidence, and earns trust through accuracy.See open rolesRaju SunnyForward Deployed EngineerBold Tech, Big OutcomesWe’re building foundational technology that’s pushing the boundaries of what’s possible with enterprise AI, unlocking massive outcomes for some of the world’s largest businesses. It’s ambitious, complex, and unlike anything else in the market.People You’ll Love Working WithOur team is made up of talented, collaborative, and driven individuals with a bias toward action and a desire to help, teach, and train. Together, we bring out the best in each other and make this a place where exceptional people drive exceptional outcomes.Fast-Paced, Purposeful WorkWe’re serious about what we’re building, but we’ve got a laid-back feel. We seek clarity, move quickly, and learn without fear of failure. We make bold decisions, solve complex problems, and above all else, build a product that solves meaningful problems for our customers.Boundless OpportunityWe believe access and impact shouldn't be limited by team or title. Regardless of your role or level, you are encouraged to step up, influence outcomes, and take on expanded charters, because we know real growth often happens outside the lines.Kailash SudhakarDirector, Website & SocialOur valuesUser FirstWe obsess about our users and their business so we can craft solutions that exceed expectations and inspire delight.One TeamWe cross all barriers to work together towards our common goals, maintaining individual accountability.Win or LearnWe move fiercely fast to problem-solve without fear of failure, to make improvements on a concrete hypothesis (bet) with every action.Life at PromptQLBenefits Beyond the BasicsConnection And CollaborationStronger TogetherBenefits Beyond The BasicsAlongside a competitive benefits package, we take the second Friday of each month off for Self-Care Friday. It's time for wellness, volunteering, or whatever helps you recharge. We also offer donation matching to amplify support for organizations that advocate for equality, uplift marginalized communities, and stand against injustice.Testimonials“I was a user of our product and fell in love with it. I knew I wanted to work for the company and be a part of something big. Our product has been proven to save developers time so they can build data for modern applications. PromptQL's open and autonomous culture keeps me engaged and motivated.”Raju SunnyForward Deployed Engineer“When I first joined the company, I was looking for two things: a good work environment and support for growth. I can confidently say I've found both. I feel like I have the resources and support to do my job well, and people make an effort to help me get what I need.”Jakob PrinceBusiness Development RepresentativeSee open positionsJoin us to build the future of reliable AIView open positions",
+          "tier": 1,
+          "title": "Join us to build the future of reliable AI | PromptQL",
+          "fetched_at": "2026-09-29T07:39:47.823Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Hasura",
+        "stage": "Series A",
+        "industry": "B2B SaaS",
+        "location": "Bengaluru, India",
+        "size_band": "50-200",
+        "key_people": [],
+        "open_roles": [
+          {
+            "title": "Senior Operations Manager",
+            "department": "Operations",
+            "source_url": "https://hasura.io/careers"
+          },
+          {
+            "title": "AI Automation Engineer",
+            "department": "Engineering",
+            "source_url": "https://hasura.io/careers"
+          }
+        ],
+        "source_map": {
+          "name": {
+            "tier": 1,
+            "source_url": "https://hasura.io"
+          },
+          "stage": {
+            "date": "2026-09",
+            "tier": 1,
+            "source_url": "https://hasura.io"
+          },
+          "size_band": {
+            "tier": 1,
+            "source_url": "https://hasura.io/about"
+          },
+          "description": {
+            "tier": 1,
+            "source_url": "https://hasura.io"
+          },
+          "what_to_know_before_approaching": {
+            "tier": 1,
+            "source_url": "https://hasura.io"
+          }
+        },
+        "description": "Get startedReady to bring your AI visions to life?Our AI Catalyst Team is here to help you assess fit and partner with you to deliver real transformation - turning bold AI ambitions into measurable business impact.If you’re reaching out for",
+        "recent_news": [
+          {
+            "date": "2026-09-18",
+            "title": "Hasura scales operations in Bengaluru with fresh customer deployment",
+            "source_url": "https://hasura.io"
+          }
+        ],
+        "likely_pains": [
+          "Manual operational coordination across expanding customer onboarding pipelines",
+          "Technical debt in backend customer integration workflows",
+          "Rising support ticket latency as user volume outpaces operations headcount"
+        ],
+        "funding_total": "Undisclosed",
+        "employee_count": 65,
+        "what_to_know_before_approaching": "Fast-scaling Series A company. Actively building out infrastructure. Pitch direct automation teardowns rather than high-level consulting."
+      },
+      "source_map": {
+        "name": {
+          "tier": 1,
+          "source_url": "https://hasura.io"
+        },
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://hasura.io"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://hasura.io/about"
+        },
+        "description": {
+          "tier": 1,
+          "source_url": "https://hasura.io"
+        },
+        "what_to_know_before_approaching": {
+          "tier": 1,
+          "source_url": "https://hasura.io"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "company_id": 2,
+      "captured_at": "2026-07-31T08:43:44.489Z",
+      "raw": [
+        {
+          "url": "https://sprinto.com",
+          "text": "Historical archived profile for Sprinto. Stage: Series A.",
+          "tier": 1,
+          "title": "Sprinto Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.489Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Sprinto",
+        "stage": "Series A",
+        "size_band": "50-100",
+        "key_people": [],
+        "open_roles": [
+          {
+            "title": "Software Engineer",
+            "department": "Engineering"
+          }
+        ],
+        "latest_round": {
+          "date": "2024-02-15",
+          "round": "Series A",
+          "amount": "$10M"
+        },
+        "employee_count": 95
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://sprinto.com"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://sprinto.com"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "company_id": 2,
+      "captured_at": "2026-09-29T08:43:44.491Z",
+      "raw": [
+        {
+          "url": "https://sprinto.com",
+          "text": "Automated security compliance and audit readiness platform for high-growth tech companies.",
+          "tier": 1,
+          "title": "Sprinto Official Website",
+          "fetched_at": "2026-09-29T08:43:44.491Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://sprinto.com/careers",
+          "text": "Open roles: Lead Operations Manager, AI Automation Specialist, Solutions Architect",
+          "tier": 1,
+          "title": "Careers at Sprinto",
+          "fetched_at": "2026-09-29T08:43:44.491Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Sprinto",
+        "stage": "Series B",
+        "size_band": "50-200",
+        "key_people": [
+          {
+            "name": "Girish Redekar",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://sprinto.com"
+          },
+          {
+            "name": "Raghuveer K",
+            "role": "Co-Founder & CTO",
+            "source_url": "https://sprinto.com"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Lead Operations Manager",
+            "department": "Operations"
+          },
+          {
+            "title": "AI Automation Specialist",
+            "department": "Engineering"
+          },
+          {
+            "title": "Solutions Architect",
+            "department": "Customer Success"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-08-14",
+          "round": "Series B",
+          "amount": "$20M"
+        },
+        "likely_pains": [
+          "Manual evidence collection from diverse SaaS customer stacks",
+          "Coordination delays during peak customer audit cycles",
+          "Auditor back-and-forth ticket management"
+        ],
+        "employee_count": 140,
+        "what_to_know_before_approaching": "Series B funded by Accel. Expanding rapidly in US/EMEA. Pitch direct workflow automation for evidence gathering."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://sprinto.com"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://sprinto.com/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "95 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-08-14",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "company_id": 3,
+      "captured_at": "2026-07-31T08:43:44.506Z",
+      "raw": [
+        {
+          "url": "https://rocketlane.com",
+          "text": "Historical archived profile for Rocketlane. Stage: Series A.",
+          "tier": 1,
+          "title": "Rocketlane Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.506Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Rocketlane",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2023-11-10",
+          "round": "Series A",
+          "amount": "$18M"
+        },
+        "employee_count": 45
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://rocketlane.com"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://rocketlane.com"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "company_id": 3,
+      "captured_at": "2026-09-29T08:43:44.507Z",
+      "raw": [
+        {
+          "url": "https://rocketlane.com",
+          "text": "Collaborative customer onboarding platform purpose-built for client-facing projects.",
+          "tier": 1,
+          "title": "Rocketlane Official Website",
+          "fetched_at": "2026-09-29T08:43:44.507Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://rocketlane.com/careers",
+          "text": "Open roles: Head of Customer Operations, Implementation Specialist, Product Marketing Manager",
+          "tier": 1,
+          "title": "Careers at Rocketlane",
+          "fetched_at": "2026-09-29T08:43:44.507Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Rocketlane",
+        "stage": "Series B",
+        "size_band": "50-200",
+        "key_people": [
+          {
+            "name": "Srikrishnan Ganesan",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://rocketlane.com"
+          },
+          {
+            "name": "Deepak Balasubramanyam",
+            "role": "Co-Founder & CTO",
+            "source_url": "https://rocketlane.com"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Head of Customer Operations",
+            "department": "Operations"
+          },
+          {
+            "title": "Implementation Specialist",
+            "department": "Professional Services"
+          },
+          {
+            "title": "Product Marketing Manager",
+            "department": "Marketing"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-07-28",
+          "round": "Series B",
+          "amount": "$24M"
+        },
+        "likely_pains": [
+          "Repetitive template synchronization across customer project workspaces",
+          "Manual customer milestone tracking across Salesforce/Hubspot"
+        ],
+        "employee_count": 120,
+        "what_to_know_before_approaching": "Backed by 8VC and Nexus. Focuses heavily on reducing time-to-value for enterprise customer onboarding."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://rocketlane.com"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://rocketlane.com/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "45 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-07-28",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "company_id": 4,
+      "captured_at": "2026-07-31T08:43:44.517Z",
+      "raw": [
+        {
+          "url": "https://kula.ai",
+          "text": "Historical archived profile for Kula. Stage: Seed.",
+          "tier": 1,
+          "title": "Kula Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.517Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Kula",
+        "stage": "Seed",
+        "size_band": "1-20",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2023-01-12",
+          "round": "Seed",
+          "amount": "$2.7M"
+        },
+        "employee_count": 18
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://kula.ai"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://kula.ai"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "company_id": 4,
+      "captured_at": "2026-09-29T08:43:44.518Z",
+      "raw": [
+        {
+          "url": "https://kula.ai",
+          "text": "Outbound recruitment automation platform helping talent teams build predictable hiring pipelines.",
+          "tier": 1,
+          "title": "Kula Official Website",
+          "fetched_at": "2026-09-29T08:43:44.518Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://kula.ai/careers",
+          "text": "Open roles: Growth Operations Lead, Senior AI Engineer",
+          "tier": 1,
+          "title": "Careers at Kula",
+          "fetched_at": "2026-09-29T08:43:44.518Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Kula",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [
+          {
+            "name": "Achuthanand Ravi",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://kula.ai"
+          },
+          {
+            "name": "Sathya Narayanan",
+            "role": "Co-Founder & CTO",
+            "source_url": "https://kula.ai"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Growth Operations Lead",
+            "department": "Operations"
+          },
+          {
+            "title": "Senior AI Engineer",
+            "department": "Engineering"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-08-30",
+          "round": "Series A",
+          "amount": "$12M"
+        },
+        "likely_pains": [
+          "Candidate profile enrichment rate-limiting and data drift",
+          "Manual multi-channel sequencing adjustments"
+        ],
+        "employee_count": 45,
+        "what_to_know_before_approaching": "Series A backed by Sequoia/Peak XV. Fast execution, founder-led outbound culture."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://kula.ai"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://kula.ai/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "18 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-08-30",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "company_id": 5,
+      "captured_at": "2026-07-31T08:43:44.529Z",
+      "raw": [
+        {
+          "url": "https://leena.ai",
+          "text": "Historical archived profile for Leena AI. Stage: Series B.",
+          "tier": 1,
+          "title": "Leena AI Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.529Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Leena AI",
+        "stage": "Series B",
+        "size_band": "50-200",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2026-06-15",
+          "round": "Series B",
+          "amount": "$30M"
+        },
+        "employee_count": 150
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://leena.ai"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://leena.ai"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "company_id": 5,
+      "captured_at": "2026-09-29T08:43:44.530Z",
+      "raw": [
+        {
+          "url": "https://leena.ai",
+          "text": "Autonomous HR and employee service delivery platform resolving workplace queries.",
+          "tier": 1,
+          "title": "Leena AI Official Website",
+          "fetched_at": "2026-09-29T08:43:44.530Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://leena.ai/careers",
+          "text": "Open roles: Operations Strategy Manager, Enterprise Account Executive",
+          "tier": 1,
+          "title": "Careers at Leena AI",
+          "fetched_at": "2026-09-29T08:43:44.530Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Leena AI",
+        "stage": "Series B",
+        "size_band": "50-200",
+        "key_people": [
+          {
+            "name": "Adit Jain",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://leena.ai"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Operations Strategy Manager",
+            "department": "Operations"
+          },
+          {
+            "title": "Enterprise Account Executive",
+            "department": "Sales"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-06-15",
+          "round": "Series B",
+          "amount": "$30M"
+        },
+        "likely_pains": [
+          "Integrating disparate enterprise legacy HRIS systems",
+          "Complex localized compliance rules across GCC and APAC regions"
+        ],
+        "employee_count": 180,
+        "what_to_know_before_approaching": "Backed by Bessemer and Greycroft. Very receptive to high-speed automation pilots."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://leena.ai"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://leena.ai/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "150 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-06-15",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "company_id": 6,
+      "captured_at": "2026-07-31T08:43:44.538Z",
+      "raw": [
+        {
+          "url": "https://barraiser.com",
+          "text": "Historical archived profile for BarRaiser. Stage: Seed.",
+          "tier": 1,
+          "title": "BarRaiser Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.538Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "BarRaiser",
+        "stage": "Seed",
+        "size_band": "1-20",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2023-04-10",
+          "round": "Seed",
+          "amount": "$1.5M"
+        },
+        "employee_count": 15
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://barraiser.com"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://barraiser.com"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "company_id": 6,
+      "captured_at": "2026-09-29T08:43:44.538Z",
+      "raw": [
+        {
+          "url": "https://barraiser.com",
+          "text": "AI-powered interview platform delivering structured evaluations and interviewer guidance.",
+          "tier": 1,
+          "title": "BarRaiser Official Website",
+          "fetched_at": "2026-09-29T08:43:44.538Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://barraiser.com/careers",
+          "text": "Open roles: Operations Lead - Expert Network, Full Stack Engineer",
+          "tier": 1,
+          "title": "Careers at BarRaiser",
+          "fetched_at": "2026-09-29T08:43:44.538Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "BarRaiser",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [
+          {
+            "name": "Avnish Anand",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://barraiser.com"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Operations Lead - Expert Network",
+            "department": "Operations"
+          },
+          {
+            "title": "Full Stack Engineer",
+            "department": "Engineering"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-09-05",
+          "round": "Series A",
+          "amount": "$4.2M"
+        },
+        "likely_pains": [
+          "Interviewer-candidate scheduling conflicts and manual calendar adjustments",
+          "Late scorecard submissions bottlenecking client hiring velocity"
+        ],
+        "employee_count": 38,
+        "what_to_know_before_approaching": "Ex-Amazon leadership team. Passionate about rigorous process automation and structured metrics."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://barraiser.com"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://barraiser.com/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "15 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-09-05",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "company_id": 7,
+      "captured_at": "2026-07-31T08:43:44.548Z",
+      "raw": [
+        {
+          "url": "https://privado.ai",
+          "text": "Historical archived profile for Privado. Stage: Seed.",
+          "tier": 1,
+          "title": "Privado Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.548Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Privado",
+        "stage": "Seed",
+        "size_band": "1-20",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2023-02-18",
+          "round": "Seed",
+          "amount": "$3.5M"
+        },
+        "employee_count": 22
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://privado.ai"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://privado.ai"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "company_id": 7,
+      "captured_at": "2026-09-29T08:43:44.549Z",
+      "raw": [
+        {
+          "url": "https://privado.ai",
+          "text": "Code scanning platform discovering data privacy vulnerabilities directly in developers' CI/CD.",
+          "tier": 1,
+          "title": "Privado Official Website",
+          "fetched_at": "2026-09-29T08:43:44.549Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://privado.ai/careers",
+          "text": "Open roles: DevRel & Operations Lead, Security Research Engineer",
+          "tier": 1,
+          "title": "Careers at Privado",
+          "fetched_at": "2026-09-29T08:43:44.549Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Privado",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [
+          {
+            "name": "Vaibhav Antil",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://privado.ai"
+          },
+          {
+            "name": "Jasdeep Kang",
+            "role": "Co-Founder & CTO",
+            "source_url": "https://privado.ai"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "DevRel & Operations Lead",
+            "department": "Operations"
+          },
+          {
+            "title": "Security Research Engineer",
+            "department": "Engineering"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-07-10",
+          "round": "Series A",
+          "amount": "$14M"
+        },
+        "likely_pains": [
+          "High false-positive noise in developer pull request annotations",
+          "Manual data mapping sign-offs between legal and engineering teams"
+        ],
+        "employee_count": 48,
+        "what_to_know_before_approaching": "Backed by Insight Partners. Top-notch engineering team; respect technical depth in outreach."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://privado.ai"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://privado.ai/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "22 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-07-10",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "company_id": 8,
+      "captured_at": "2026-07-31T08:43:44.557Z",
+      "raw": [
+        {
+          "url": "https://devtron.ai",
+          "text": "Historical archived profile for Devtron. Stage: Seed.",
+          "tier": 1,
+          "title": "Devtron Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.557Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Devtron",
+        "stage": "Seed",
+        "size_band": "1-20",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2022-10-05",
+          "round": "Seed",
+          "amount": "$2.5M"
+        },
+        "employee_count": 19
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://devtron.ai"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://devtron.ai"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "company_id": 8,
+      "captured_at": "2026-09-29T08:43:44.558Z",
+      "raw": [
+        {
+          "url": "https://devtron.ai",
+          "text": "Open source software delivery platform for Kubernetes, streamlining build, deploy, and monitor.",
+          "tier": 1,
+          "title": "Devtron Official Website",
+          "fetched_at": "2026-09-29T08:43:44.558Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://devtron.ai/careers",
+          "text": "Open roles: Cloud Infrastructure Specialist, Technical Support Operations",
+          "tier": 1,
+          "title": "Careers at Devtron",
+          "fetched_at": "2026-09-29T08:43:44.558Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Devtron",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [
+          {
+            "name": "Prashant Ghildiyal",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://devtron.ai"
+          },
+          {
+            "name": "Nishant Kumar",
+            "role": "Co-Founder & CTO",
+            "source_url": "https://devtron.ai"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Cloud Infrastructure Specialist",
+            "department": "Engineering"
+          },
+          {
+            "title": "Technical Support Operations",
+            "department": "Support"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-08-19",
+          "round": "Series A",
+          "amount": "$8M"
+        },
+        "likely_pains": [
+          "Triage overhead for multi-tenant Kubernetes cluster troubleshooting",
+          "Manual incident ticket triage for community discord and enterprise slack channels"
+        ],
+        "employee_count": 42,
+        "what_to_know_before_approaching": "Developer-centric, fast growing GitHub stars. Pitch automation that frees up senior engineers."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://devtron.ai"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://devtron.ai/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "19 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-08-19",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "company_id": 9,
+      "captured_at": "2026-07-31T08:43:44.567Z",
+      "raw": [
+        {
+          "url": "https://superops.com",
+          "text": "Historical archived profile for SuperOps.ai. Stage: Series A.",
+          "tier": 1,
+          "title": "SuperOps.ai Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.567Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "SuperOps.ai",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2024-01-20",
+          "round": "Series A",
+          "amount": "$14M"
+        },
+        "employee_count": 50
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://superops.com"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://superops.com"
+        }
+      }
+    },
+    {
+      "id": 17,
+      "company_id": 9,
+      "captured_at": "2026-09-29T08:43:44.568Z",
+      "raw": [
+        {
+          "url": "https://superops.com",
+          "text": "Unified PSA and RMM software platform designed for modern managed service providers.",
+          "tier": 1,
+          "title": "SuperOps.ai Official Website",
+          "fetched_at": "2026-09-29T08:43:44.568Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://superops.com/careers",
+          "text": "Open roles: Head of Revenue Operations, Senior Backend Developer",
+          "tier": 1,
+          "title": "Careers at SuperOps.ai",
+          "fetched_at": "2026-09-29T08:43:44.568Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "SuperOps.ai",
+        "stage": "Series B",
+        "size_band": "50-200",
+        "key_people": [
+          {
+            "name": "Arvind Parthiban",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://superops.com"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Head of Revenue Operations",
+            "department": "Operations"
+          },
+          {
+            "title": "Senior Backend Developer",
+            "department": "Engineering"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-07-02",
+          "round": "Series B",
+          "amount": "$12.4M"
+        },
+        "likely_pains": [
+          "Complex billing reconciliation for multi-tier MSP client contracts",
+          "Alert fatigue from redundant automated RMM telemetry scripts"
+        ],
+        "employee_count": 95,
+        "what_to_know_before_approaching": "Backed by Addition and March Capital. Fast GTM execution with strong focus on operational metrics."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://superops.com"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://superops.com/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "50 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-07-02",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 18,
+      "company_id": 10,
+      "captured_at": "2026-07-31T08:43:44.576Z",
+      "raw": [
+        {
+          "url": "https://signzy.com",
+          "text": "Historical archived profile for Signzy. Stage: Series B.",
+          "tier": 1,
+          "title": "Signzy Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.576Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Signzy",
+        "stage": "Series B",
+        "size_band": "50-200",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2026-06-25",
+          "round": "Series B",
+          "amount": "$26M"
+        },
+        "employee_count": 140
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://signzy.com"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://signzy.com"
+        }
+      }
+    },
+    {
+      "id": 19,
+      "company_id": 10,
+      "captured_at": "2026-09-29T08:43:44.577Z",
+      "raw": [
+        {
+          "url": "https://signzy.com",
+          "text": "No-code AI workflow platform for banking onboarding, fraud detection, and biometric KYC.",
+          "tier": 1,
+          "title": "Signzy Official Website",
+          "fetched_at": "2026-09-29T08:43:44.577Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://signzy.com/careers",
+          "text": "Open roles: Risk & Compliance Operations Manager, DevOps Engineer",
+          "tier": 1,
+          "title": "Careers at Signzy",
+          "fetched_at": "2026-09-29T08:43:44.577Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Signzy",
+        "stage": "Series B",
+        "size_band": "50-200",
+        "key_people": [
+          {
+            "name": "Ankit Ratan",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://signzy.com"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Risk & Compliance Operations Manager",
+            "department": "Operations"
+          },
+          {
+            "title": "DevOps Engineer",
+            "department": "Engineering"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-06-25",
+          "round": "Series B",
+          "amount": "$26M"
+        },
+        "likely_pains": [
+          "Handling edge-case document failures in automated OCR verification pipelines",
+          "Tight SLA guarantees required by tier-1 institutional banking clients"
+        ],
+        "employee_count": 175,
+        "what_to_know_before_approaching": "Works with major global banks. Security, data sovereignty, and audited SLAs are paramount."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://signzy.com"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://signzy.com/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "140 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-06-25",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 20,
+      "company_id": 11,
+      "captured_at": "2026-07-31T08:43:44.585Z",
+      "raw": [
+        {
+          "url": "https://toplyne.io",
+          "text": "Historical archived profile for Toplyne. Stage: Series A.",
+          "tier": 1,
+          "title": "Toplyne Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.585Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Toplyne",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2026-05-18",
+          "round": "Series A",
+          "amount": "$15M"
+        },
+        "employee_count": 35
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://toplyne.io"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://toplyne.io"
+        }
+      }
+    },
+    {
+      "id": 21,
+      "company_id": 11,
+      "captured_at": "2026-09-29T08:43:44.586Z",
+      "raw": [
+        {
+          "url": "https://toplyne.io",
+          "text": "Product-led sales intelligence platform identifying high-intent users inside freemium funnels.",
+          "tier": 1,
+          "title": "Toplyne Official Website",
+          "fetched_at": "2026-09-29T08:43:44.586Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://toplyne.io/careers",
+          "text": "Open roles: Solutions Engineer, Data Platform Engineer",
+          "tier": 1,
+          "title": "Careers at Toplyne",
+          "fetched_at": "2026-09-29T08:43:44.586Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Toplyne",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [
+          {
+            "name": "Rishen Kapoor",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://toplyne.io"
+          },
+          {
+            "name": "Ruchin Kulkarni",
+            "role": "Co-Founder",
+            "source_url": "https://toplyne.io"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Solutions Engineer",
+            "department": "Sales Engineering"
+          },
+          {
+            "title": "Data Platform Engineer",
+            "department": "Engineering"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-05-18",
+          "round": "Series A",
+          "amount": "$15M"
+        },
+        "likely_pains": [
+          "Product telemetry schema drift breaking downstream scoring models",
+          "Manual pipeline handoffs between marketing automation and CRM"
+        ],
+        "employee_count": 45,
+        "what_to_know_before_approaching": "Backed by Tiger Global and Peak XV. Highly analytical culture; numbers-first pitch."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://toplyne.io"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://toplyne.io/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "35 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-05-18",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 22,
+      "company_id": 12,
+      "captured_at": "2026-07-31T08:43:44.593Z",
+      "raw": [
+        {
+          "url": "https://murf.ai",
+          "text": "Historical archived profile for Murf.ai. Stage: Seed.",
+          "tier": 1,
+          "title": "Murf.ai Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.593Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Murf.ai",
+        "stage": "Seed",
+        "size_band": "1-20",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2022-08-15",
+          "round": "Seed",
+          "amount": "$1.5M"
+        },
+        "employee_count": 20
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://murf.ai"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://murf.ai"
+        }
+      }
+    },
+    {
+      "id": 23,
+      "company_id": 12,
+      "captured_at": "2026-09-29T08:43:44.593Z",
+      "raw": [
+        {
+          "url": "https://murf.ai",
+          "text": "AI speech architecture and synthetic voice generator platform for enterprise content creators.",
+          "tier": 1,
+          "title": "Murf.ai Official Website",
+          "fetched_at": "2026-09-29T08:43:44.593Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://murf.ai/careers",
+          "text": "Open roles: Audio Model Operations Specialist, Product Support Lead",
+          "tier": 1,
+          "title": "Careers at Murf.ai",
+          "fetched_at": "2026-09-29T08:43:44.593Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Murf.ai",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [
+          {
+            "name": "Sneha Roy",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://murf.ai"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Audio Model Operations Specialist",
+            "department": "Operations"
+          },
+          {
+            "title": "Product Support Lead",
+            "department": "Customer Support"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-05-30",
+          "round": "Series A",
+          "amount": "$10M"
+        },
+        "likely_pains": [
+          "High compute GPU latency during peak batch text-to-speech rendering",
+          "Enterprise licensing validation and copyright compliance auditing"
+        ],
+        "employee_count": 46,
+        "what_to_know_before_approaching": "Backed by Elevation Capital. Massive organic product growth; rapid international expansion."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://murf.ai"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://murf.ai/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "20 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-05-30",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 24,
+      "company_id": 13,
+      "captured_at": "2026-07-31T08:43:44.602Z",
+      "raw": [
+        {
+          "url": "https://zoko.io",
+          "text": "Historical archived profile for Zoko. Stage: Seed.",
+          "tier": 1,
+          "title": "Zoko Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.602Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Zoko",
+        "stage": "Seed",
+        "size_band": "1-20",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2023-03-20",
+          "round": "Seed",
+          "amount": "$1.5M"
+        },
+        "employee_count": 14
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://zoko.io"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://zoko.io"
+        }
+      }
+    },
+    {
+      "id": 25,
+      "company_id": 13,
+      "captured_at": "2026-09-29T08:43:44.602Z",
+      "raw": [
+        {
+          "url": "https://zoko.io",
+          "text": "Centralized WhatsApp conversational commerce and support hub for Shopify e-commerce brands.",
+          "tier": 1,
+          "title": "Zoko Official Website",
+          "fetched_at": "2026-09-29T08:43:44.602Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://zoko.io/careers",
+          "text": "Open roles: Customer Success Operations",
+          "tier": 1,
+          "title": "Careers at Zoko",
+          "fetched_at": "2026-09-29T08:43:44.602Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Zoko",
+        "stage": "Seed",
+        "size_band": "20-50",
+        "key_people": [
+          {
+            "name": "Arjun Rasquinha",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://zoko.io"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Customer Success Operations",
+            "department": "Operations"
+          }
+        ],
+        "latest_round": {
+          "date": "2026-04-12",
+          "round": "Seed",
+          "amount": "$3.5M"
+        },
+        "likely_pains": [
+          "Meta WhatsApp Cloud API rate-limiting during seasonal flash sales",
+          "Manual order status routing between WhatsApp chat and Shopify ERP"
+        ],
+        "employee_count": 32,
+        "what_to_know_before_approaching": "Y Combinator alum. Fast-growing merchant base across India and Latin America."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://zoko.io"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://zoko.io/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "14 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2026-04-12",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 26,
+      "company_id": 14,
+      "captured_at": "2026-07-31T08:43:44.610Z",
+      "raw": [
+        {
+          "url": "https://yellow.ai",
+          "text": "Historical archived profile for Yellow.ai. Stage: Series C.",
+          "tier": 1,
+          "title": "Yellow.ai Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.610Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Yellow.ai",
+        "stage": "Series C",
+        "size_band": "200-500",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2025-08-10",
+          "round": "Series C",
+          "amount": "$78M"
+        },
+        "employee_count": 310
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://yellow.ai"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://yellow.ai"
+        }
+      }
+    },
+    {
+      "id": 27,
+      "company_id": 14,
+      "captured_at": "2026-09-29T08:43:44.610Z",
+      "raw": [
+        {
+          "url": "https://yellow.ai",
+          "text": "Autonomous customer service and employee experience platform with multi-LLM orchestration.",
+          "tier": 1,
+          "title": "Yellow.ai Official Website",
+          "fetched_at": "2026-09-29T08:43:44.610Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://yellow.ai/careers",
+          "text": "Open roles: Senior Director, Global Cloud Operations, Enterprise Solution Architect",
+          "tier": 1,
+          "title": "Careers at Yellow.ai",
+          "fetched_at": "2026-09-29T08:43:44.610Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Yellow.ai",
+        "stage": "Series C",
+        "size_band": "200-500",
+        "key_people": [
+          {
+            "name": "Raghu Ravinutala",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://yellow.ai"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Senior Director, Global Cloud Operations",
+            "department": "Operations"
+          },
+          {
+            "title": "Enterprise Solution Architect",
+            "department": "Engineering"
+          }
+        ],
+        "latest_round": {
+          "date": "2025-08-10",
+          "round": "Series C",
+          "amount": "$78M"
+        },
+        "likely_pains": [
+          "Multi-vendor model billing consolidation and token cost controls",
+          "Enterprise data sovereignty and localized compliance reporting"
+        ],
+        "employee_count": 350,
+        "what_to_know_before_approaching": "Series C enterprise. Large headcount makes closing slower, but larger contract sizes."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://yellow.ai"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://yellow.ai/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "310 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2025-08-10",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 28,
+      "company_id": 15,
+      "captured_at": "2026-07-31T08:43:44.618Z",
+      "raw": [
+        {
+          "url": "https://postman.com",
+          "text": "Historical archived profile for Postman. Stage: Series D.",
+          "tier": 1,
+          "title": "Postman Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.618Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "Postman",
+        "stage": "Series D",
+        "size_band": "500+",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2024-06-18",
+          "round": "Series D",
+          "amount": "$225M"
+        },
+        "employee_count": 600
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://postman.com"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://postman.com"
+        }
+      }
+    },
+    {
+      "id": 29,
+      "company_id": 15,
+      "captured_at": "2026-09-29T08:43:44.618Z",
+      "raw": [
+        {
+          "url": "https://postman.com",
+          "text": "Universal collaborative API platform used by over 30 million developers worldwide.",
+          "tier": 1,
+          "title": "Postman Official Website",
+          "fetched_at": "2026-09-29T08:43:44.618Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://postman.com/careers",
+          "text": "Open roles: Engineering Operations Manager, Senior Security Specialist",
+          "tier": 1,
+          "title": "Careers at Postman",
+          "fetched_at": "2026-09-29T08:43:44.618Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "Postman",
+        "stage": "Series D",
+        "size_band": "500+",
+        "key_people": [
+          {
+            "name": "Abhinav Asthana",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://postman.com"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Engineering Operations Manager",
+            "department": "Operations"
+          },
+          {
+            "title": "Senior Security Specialist",
+            "department": "Security"
+          }
+        ],
+        "latest_round": {
+          "date": "2024-06-18",
+          "round": "Series D",
+          "amount": "$225M"
+        },
+        "likely_pains": [
+          "Massive multi-repo developer coordination latency",
+          "Complex cross-departmental access management and compliance auditing"
+        ],
+        "employee_count": 650,
+        "what_to_know_before_approaching": "Very large enterprise. Out of sweet spot for solo agency, but tracked as industry benchmark."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://postman.com"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://postman.com/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "600 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2024-06-18",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    },
+    {
+      "id": 30,
+      "company_id": 16,
+      "captured_at": "2026-07-31T08:43:44.626Z",
+      "raw": [
+        {
+          "url": "https://invideo.io",
+          "text": "Historical archived profile for InVideo. Stage: Series A.",
+          "tier": 1,
+          "title": "InVideo Baseline Archive",
+          "fetched_at": "2026-07-31T08:43:44.626Z",
+          "source_type": "site"
+        }
+      ],
+      "extracted": {
+        "name": "InVideo",
+        "stage": "Series A",
+        "size_band": "20-50",
+        "key_people": [],
+        "open_roles": [],
+        "latest_round": {
+          "date": "2025-11-20",
+          "round": "Series A",
+          "amount": "$15M"
+        },
+        "employee_count": 45
+      },
+      "source_map": {
+        "stage": {
+          "date": "2024",
+          "tier": 1,
+          "source_url": "https://invideo.io"
+        },
+        "size_band": {
+          "tier": 1,
+          "source_url": "https://invideo.io"
+        }
+      }
+    },
+    {
+      "id": 31,
+      "company_id": 16,
+      "captured_at": "2026-09-29T08:43:44.627Z",
+      "raw": [
+        {
+          "url": "https://invideo.io",
+          "text": "Generative AI video creator transforming text prompts into studio-quality publishable video.",
+          "tier": 1,
+          "title": "InVideo Official Website",
+          "fetched_at": "2026-09-29T08:43:44.627Z",
+          "source_type": "site"
+        },
+        {
+          "url": "https://invideo.io/careers",
+          "text": "Open roles: Video Pipeline Systems Engineer, Customer Operations Analyst",
+          "tier": 1,
+          "title": "Careers at InVideo",
+          "fetched_at": "2026-09-29T08:43:44.627Z",
+          "source_type": "careers"
+        }
+      ],
+      "extracted": {
+        "name": "InVideo",
+        "stage": "Series A",
+        "size_band": "50-200",
+        "key_people": [
+          {
+            "name": "Sanket Shah",
+            "role": "Co-Founder & CEO",
+            "source_url": "https://invideo.io"
+          }
+        ],
+        "open_roles": [
+          {
+            "title": "Video Pipeline Systems Engineer",
+            "department": "Engineering"
+          },
+          {
+            "title": "Customer Operations Analyst",
+            "department": "Operations"
+          }
+        ],
+        "latest_round": {
+          "date": "2025-11-20",
+          "round": "Series A",
+          "amount": "$15M"
+        },
+        "likely_pains": [
+          "Surging GPU rendering queue spikes during promotional campaigns",
+          "High support overhead for video export rendering failures"
+        ],
+        "employee_count": 85,
+        "what_to_know_before_approaching": "Extremely fast moving team. Direct teardowns of rendering pipeline bottlenecks perform best."
+      },
+      "source_map": {
+        "stage": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://invideo.io"
+        },
+        "size_band": {
+          "date": "2026-09",
+          "tier": 1,
+          "source_url": "https://invideo.io/about",
+          "alternatives": [
+            {
+              "date": "2024",
+              "tier": 2,
+              "label": "historical press release",
+              "value": "45 employees",
+              "status": "superseded",
+              "source_url": "https://yourstory.com/article"
+            }
+          ]
+        },
+        "latest_round": {
+          "date": "2025-11-20",
+          "tier": 2,
+          "source_url": "https://techcrunch.com/funding-round"
+        }
+      }
+    }
+  ],
+  "signals": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "snapshot_from": null,
+      "snapshot_to": 1,
+      "type": "hiring",
+      "description": "Hiring for 2 roles including Senior Operations Manager, AI Automation Engineer",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T07:39:51.670Z"
+    },
+    {
+      "id": 2,
+      "company_id": 2,
+      "snapshot_from": 2,
+      "snapshot_to": 3,
+      "type": "funding",
+      "description": "Announced Series B round of $20M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.491Z"
+    },
+    {
+      "id": 3,
+      "company_id": 2,
+      "snapshot_from": 2,
+      "snapshot_to": 3,
+      "type": "expansion",
+      "description": "Company team size grew from 50-100 to 50-200",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.491Z"
+    },
+    {
+      "id": 4,
+      "company_id": 2,
+      "snapshot_from": 2,
+      "snapshot_to": 3,
+      "type": "hiring",
+      "description": "Opened 3 new roles: Lead Operations Manager, AI Automation Specialist, Solutions Architect (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.491Z"
+    },
+    {
+      "id": 5,
+      "company_id": 2,
+      "snapshot_from": 2,
+      "snapshot_to": 3,
+      "type": "leadership",
+      "description": "New leadership added: Girish Redekar as Co-Founder & CEO, Raghuveer K as Co-Founder & CTO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.491Z"
+    },
+    {
+      "id": 6,
+      "company_id": 2,
+      "snapshot_from": 2,
+      "snapshot_to": 3,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.491Z"
+    },
+    {
+      "id": 7,
+      "company_id": 3,
+      "snapshot_from": 4,
+      "snapshot_to": 5,
+      "type": "funding",
+      "description": "Announced Series B round of $24M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.507Z"
+    },
+    {
+      "id": 8,
+      "company_id": 3,
+      "snapshot_from": 4,
+      "snapshot_to": 5,
+      "type": "expansion",
+      "description": "Company team size grew from 20-50 to 50-200",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.507Z"
+    },
+    {
+      "id": 9,
+      "company_id": 3,
+      "snapshot_from": 4,
+      "snapshot_to": 5,
+      "type": "leadership",
+      "description": "Opened 3 new roles: Head of Customer Operations, Implementation Specialist, Product Marketing Manager (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.507Z"
+    },
+    {
+      "id": 10,
+      "company_id": 3,
+      "snapshot_from": 4,
+      "snapshot_to": 5,
+      "type": "leadership",
+      "description": "New leadership added: Srikrishnan Ganesan as Co-Founder & CEO, Deepak Balasubramanyam as Co-Founder & CTO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.507Z"
+    },
+    {
+      "id": 11,
+      "company_id": 3,
+      "snapshot_from": 4,
+      "snapshot_to": 5,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.507Z"
+    },
+    {
+      "id": 12,
+      "company_id": 4,
+      "snapshot_from": 6,
+      "snapshot_to": 7,
+      "type": "funding",
+      "description": "Announced Series A round of $12M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.518Z"
+    },
+    {
+      "id": 13,
+      "company_id": 4,
+      "snapshot_from": 6,
+      "snapshot_to": 7,
+      "type": "expansion",
+      "description": "Company team size grew from 1-20 to 20-50",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.518Z"
+    },
+    {
+      "id": 14,
+      "company_id": 4,
+      "snapshot_from": 6,
+      "snapshot_to": 7,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Growth Operations Lead, Senior AI Engineer (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.518Z"
+    },
+    {
+      "id": 15,
+      "company_id": 4,
+      "snapshot_from": 6,
+      "snapshot_to": 7,
+      "type": "leadership",
+      "description": "New leadership added: Achuthanand Ravi as Co-Founder & CEO, Sathya Narayanan as Co-Founder & CTO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.518Z"
+    },
+    {
+      "id": 16,
+      "company_id": 4,
+      "snapshot_from": 6,
+      "snapshot_to": 7,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.518Z"
+    },
+    {
+      "id": 17,
+      "company_id": 5,
+      "snapshot_from": 8,
+      "snapshot_to": 9,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Operations Strategy Manager, Enterprise Account Executive (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.530Z"
+    },
+    {
+      "id": 18,
+      "company_id": 5,
+      "snapshot_from": 8,
+      "snapshot_to": 9,
+      "type": "leadership",
+      "description": "New leadership added: Adit Jain as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.530Z"
+    },
+    {
+      "id": 19,
+      "company_id": 5,
+      "snapshot_from": 8,
+      "snapshot_to": 9,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.530Z"
+    },
+    {
+      "id": 20,
+      "company_id": 6,
+      "snapshot_from": 10,
+      "snapshot_to": 11,
+      "type": "funding",
+      "description": "Announced Series A round of $4.2M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.538Z"
+    },
+    {
+      "id": 21,
+      "company_id": 6,
+      "snapshot_from": 10,
+      "snapshot_to": 11,
+      "type": "expansion",
+      "description": "Company team size grew from 1-20 to 20-50",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.538Z"
+    },
+    {
+      "id": 22,
+      "company_id": 6,
+      "snapshot_from": 10,
+      "snapshot_to": 11,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Operations Lead - Expert Network, Full Stack Engineer (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.538Z"
+    },
+    {
+      "id": 23,
+      "company_id": 6,
+      "snapshot_from": 10,
+      "snapshot_to": 11,
+      "type": "leadership",
+      "description": "New leadership added: Avnish Anand as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.538Z"
+    },
+    {
+      "id": 24,
+      "company_id": 6,
+      "snapshot_from": 10,
+      "snapshot_to": 11,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.538Z"
+    },
+    {
+      "id": 25,
+      "company_id": 7,
+      "snapshot_from": 12,
+      "snapshot_to": 13,
+      "type": "funding",
+      "description": "Announced Series A round of $14M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.549Z"
+    },
+    {
+      "id": 26,
+      "company_id": 7,
+      "snapshot_from": 12,
+      "snapshot_to": 13,
+      "type": "expansion",
+      "description": "Company team size grew from 1-20 to 20-50",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.549Z"
+    },
+    {
+      "id": 27,
+      "company_id": 7,
+      "snapshot_from": 12,
+      "snapshot_to": 13,
+      "type": "hiring",
+      "description": "Opened 2 new roles: DevRel & Operations Lead, Security Research Engineer (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.549Z"
+    },
+    {
+      "id": 28,
+      "company_id": 7,
+      "snapshot_from": 12,
+      "snapshot_to": 13,
+      "type": "leadership",
+      "description": "New leadership added: Vaibhav Antil as Co-Founder & CEO, Jasdeep Kang as Co-Founder & CTO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.549Z"
+    },
+    {
+      "id": 29,
+      "company_id": 7,
+      "snapshot_from": 12,
+      "snapshot_to": 13,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.549Z"
+    },
+    {
+      "id": 30,
+      "company_id": 8,
+      "snapshot_from": 14,
+      "snapshot_to": 15,
+      "type": "funding",
+      "description": "Announced Series A round of $8M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.558Z"
+    },
+    {
+      "id": 31,
+      "company_id": 8,
+      "snapshot_from": 14,
+      "snapshot_to": 15,
+      "type": "expansion",
+      "description": "Company team size grew from 1-20 to 20-50",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.558Z"
+    },
+    {
+      "id": 32,
+      "company_id": 8,
+      "snapshot_from": 14,
+      "snapshot_to": 15,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Cloud Infrastructure Specialist, Technical Support Operations (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.558Z"
+    },
+    {
+      "id": 33,
+      "company_id": 8,
+      "snapshot_from": 14,
+      "snapshot_to": 15,
+      "type": "leadership",
+      "description": "New leadership added: Prashant Ghildiyal as Co-Founder & CEO, Nishant Kumar as Co-Founder & CTO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.558Z"
+    },
+    {
+      "id": 34,
+      "company_id": 8,
+      "snapshot_from": 14,
+      "snapshot_to": 15,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.558Z"
+    },
+    {
+      "id": 35,
+      "company_id": 9,
+      "snapshot_from": 16,
+      "snapshot_to": 17,
+      "type": "funding",
+      "description": "Announced Series B round of $12.4M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.568Z"
+    },
+    {
+      "id": 36,
+      "company_id": 9,
+      "snapshot_from": 16,
+      "snapshot_to": 17,
+      "type": "expansion",
+      "description": "Company team size grew from 20-50 to 50-200",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.568Z"
+    },
+    {
+      "id": 37,
+      "company_id": 9,
+      "snapshot_from": 16,
+      "snapshot_to": 17,
+      "type": "leadership",
+      "description": "Opened 2 new roles: Head of Revenue Operations, Senior Backend Developer (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.568Z"
+    },
+    {
+      "id": 38,
+      "company_id": 9,
+      "snapshot_from": 16,
+      "snapshot_to": 17,
+      "type": "leadership",
+      "description": "New leadership added: Arvind Parthiban as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.568Z"
+    },
+    {
+      "id": 39,
+      "company_id": 9,
+      "snapshot_from": 16,
+      "snapshot_to": 17,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.568Z"
+    },
+    {
+      "id": 40,
+      "company_id": 10,
+      "snapshot_from": 18,
+      "snapshot_to": 19,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Risk & Compliance Operations Manager, DevOps Engineer (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.577Z"
+    },
+    {
+      "id": 41,
+      "company_id": 10,
+      "snapshot_from": 18,
+      "snapshot_to": 19,
+      "type": "leadership",
+      "description": "New leadership added: Ankit Ratan as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.577Z"
+    },
+    {
+      "id": 42,
+      "company_id": 10,
+      "snapshot_from": 18,
+      "snapshot_to": 19,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.577Z"
+    },
+    {
+      "id": 43,
+      "company_id": 11,
+      "snapshot_from": 20,
+      "snapshot_to": 21,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Solutions Engineer, Data Platform Engineer",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.586Z"
+    },
+    {
+      "id": 44,
+      "company_id": 11,
+      "snapshot_from": 20,
+      "snapshot_to": 21,
+      "type": "leadership",
+      "description": "New leadership added: Rishen Kapoor as Co-Founder & CEO, Ruchin Kulkarni as Co-Founder",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.586Z"
+    },
+    {
+      "id": 45,
+      "company_id": 11,
+      "snapshot_from": 20,
+      "snapshot_to": 21,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.586Z"
+    },
+    {
+      "id": 46,
+      "company_id": 12,
+      "snapshot_from": 22,
+      "snapshot_to": 23,
+      "type": "funding",
+      "description": "Announced Series A round of $10M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.593Z"
+    },
+    {
+      "id": 47,
+      "company_id": 12,
+      "snapshot_from": 22,
+      "snapshot_to": 23,
+      "type": "expansion",
+      "description": "Company team size grew from 1-20 to 20-50",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.593Z"
+    },
+    {
+      "id": 48,
+      "company_id": 12,
+      "snapshot_from": 22,
+      "snapshot_to": 23,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Audio Model Operations Specialist, Product Support Lead (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.593Z"
+    },
+    {
+      "id": 49,
+      "company_id": 12,
+      "snapshot_from": 22,
+      "snapshot_to": 23,
+      "type": "leadership",
+      "description": "New leadership added: Sneha Roy as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.593Z"
+    },
+    {
+      "id": 50,
+      "company_id": 12,
+      "snapshot_from": 22,
+      "snapshot_to": 23,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.593Z"
+    },
+    {
+      "id": 51,
+      "company_id": 13,
+      "snapshot_from": 24,
+      "snapshot_to": 25,
+      "type": "funding",
+      "description": "Announced Seed round of $3.5M",
+      "is_meaningful": true,
+      "reason": "Fresh capital injection signals immediate budget for scaling workflows and AI tooling.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.602Z"
+    },
+    {
+      "id": 52,
+      "company_id": 13,
+      "snapshot_from": 24,
+      "snapshot_to": 25,
+      "type": "expansion",
+      "description": "Company team size grew from 1-20 to 20-50",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.602Z"
+    },
+    {
+      "id": 53,
+      "company_id": 13,
+      "snapshot_from": 24,
+      "snapshot_to": 25,
+      "type": "hiring",
+      "description": "Opened 1 new roles: Customer Success Operations (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.602Z"
+    },
+    {
+      "id": 54,
+      "company_id": 13,
+      "snapshot_from": 24,
+      "snapshot_to": 25,
+      "type": "leadership",
+      "description": "New leadership added: Arjun Rasquinha as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.602Z"
+    },
+    {
+      "id": 55,
+      "company_id": 13,
+      "snapshot_from": 24,
+      "snapshot_to": 25,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.602Z"
+    },
+    {
+      "id": 56,
+      "company_id": 14,
+      "snapshot_from": 26,
+      "snapshot_to": 27,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Senior Director, Global Cloud Operations, Enterprise Solution Architect (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.610Z"
+    },
+    {
+      "id": 57,
+      "company_id": 14,
+      "snapshot_from": 26,
+      "snapshot_to": 27,
+      "type": "leadership",
+      "description": "New leadership added: Raghu Ravinutala as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.610Z"
+    },
+    {
+      "id": 58,
+      "company_id": 14,
+      "snapshot_from": 26,
+      "snapshot_to": 27,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.610Z"
+    },
+    {
+      "id": 59,
+      "company_id": 15,
+      "snapshot_from": 28,
+      "snapshot_to": 29,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Engineering Operations Manager, Senior Security Specialist (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.618Z"
+    },
+    {
+      "id": 60,
+      "company_id": 15,
+      "snapshot_from": 28,
+      "snapshot_to": 29,
+      "type": "leadership",
+      "description": "New leadership added: Abhinav Asthana as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.618Z"
+    },
+    {
+      "id": 61,
+      "company_id": 15,
+      "snapshot_from": 28,
+      "snapshot_to": 29,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.618Z"
+    },
+    {
+      "id": 62,
+      "company_id": 16,
+      "snapshot_from": 30,
+      "snapshot_to": 31,
+      "type": "expansion",
+      "description": "Company team size grew from 20-50 to 50-200",
+      "is_meaningful": true,
+      "reason": "New offerings or pricing restructuring requires rapid support and operational scale.",
+      "urgency": "medium",
+      "detected_at": "2026-09-29T08:43:44.627Z"
+    },
+    {
+      "id": 63,
+      "company_id": 16,
+      "snapshot_from": 30,
+      "snapshot_to": 31,
+      "type": "hiring",
+      "description": "Opened 2 new roles: Video Pipeline Systems Engineer, Customer Operations Analyst (includes critical ops/automation roles)",
+      "is_meaningful": true,
+      "reason": "Active recruitment in operations indicates workflow bottlenecks that AI automation directly resolves.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.627Z"
+    },
+    {
+      "id": 64,
+      "company_id": 16,
+      "snapshot_from": 30,
+      "snapshot_to": 31,
+      "type": "leadership",
+      "description": "New leadership added: Sanket Shah as Co-Founder & CEO",
+      "is_meaningful": true,
+      "reason": "New leadership brings mandate to evaluate tools and overhaul operational bottlenecks in first 90 days.",
+      "urgency": "high",
+      "detected_at": "2026-09-29T08:43:44.627Z"
+    },
+    {
+      "id": 65,
+      "company_id": 16,
+      "snapshot_from": 30,
+      "snapshot_to": 31,
+      "type": "noise",
+      "description": "Reworded hero tagline on website landing page",
+      "is_meaningful": false,
+      "reason": "Routine website copy or minor visual update; does not indicate immediate buying urgency.",
+      "urgency": "low",
+      "detected_at": "2026-09-29T08:43:44.627Z"
+    }
+  ],
+  "people": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "name": null,
+      "role": "Head of Operations / Chief of Staff",
+      "persona": "Head of Operations",
+      "persona_reason": "Owns internal team operations and process bandwidth constraints.",
+      "source_url": "https://hasura.io/about",
+      "confidence": "low"
+    },
+    {
+      "id": 2,
+      "company_id": 2,
+      "name": "Girish Redekar",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Directly leads product strategy and tooling investments.",
+      "source_url": "https://sprinto.com/about",
+      "confidence": "high"
+    },
+    {
+      "id": 3,
+      "company_id": 2,
+      "name": "Raghuveer K",
+      "role": "Co-Founder & CTO",
+      "persona": "VP of Engineering / CTO",
+      "persona_reason": "Evaluates API integrations, data security, and automation infrastructure.",
+      "source_url": "https://sprinto.com/about",
+      "confidence": "high"
+    },
+    {
+      "id": 4,
+      "company_id": 2,
+      "name": null,
+      "role": "Director of Operations",
+      "persona": "Head of Operations",
+      "persona_reason": "Manages compliance audit operations and workflow bottlenecks.",
+      "source_url": "https://sprinto.com/about",
+      "confidence": "medium"
+    },
+    {
+      "id": 5,
+      "company_id": 3,
+      "name": "Srikrishnan Ganesan",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Oversees enterprise onboarding methodology and tech adoption.",
+      "source_url": "https://rocketlane.com/about",
+      "confidence": "high"
+    },
+    {
+      "id": 6,
+      "company_id": 3,
+      "name": "Deepak Balasubramanyam",
+      "role": "Co-Founder & CTO",
+      "persona": "VP of Engineering / CTO",
+      "persona_reason": "Assesses enterprise integrations and API pipeline reliability.",
+      "source_url": "https://rocketlane.com/about",
+      "confidence": "high"
+    },
+    {
+      "id": 7,
+      "company_id": 4,
+      "name": "Achuthanand Ravi",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Directly evaluates AI tooling that improves recruiter outbound throughput.",
+      "source_url": "https://kula.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 8,
+      "company_id": 4,
+      "name": "Sathya Narayanan",
+      "role": "Co-Founder & CTO",
+      "persona": "VP of Engineering / CTO",
+      "persona_reason": "Architects outbound message generation infrastructure.",
+      "source_url": "https://kula.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 9,
+      "company_id": 5,
+      "name": "Adit Jain",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Sets capital expenditure and platform integration priorities.",
+      "source_url": "https://leena.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 10,
+      "company_id": 5,
+      "name": null,
+      "role": "VP of Global Operations",
+      "persona": "Head of Operations",
+      "persona_reason": "Maintains SLA delivery across multi-country HR ticket automation.",
+      "source_url": "https://leena.ai/about",
+      "confidence": "medium"
+    },
+    {
+      "id": 11,
+      "company_id": 6,
+      "name": "Avnish Anand",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Oversees interviewer quality and marketplace efficiency.",
+      "source_url": "https://barraiser.com/about",
+      "confidence": "high"
+    },
+    {
+      "id": 12,
+      "company_id": 6,
+      "name": null,
+      "role": "Head of Community Operations",
+      "persona": "Head of Operations",
+      "persona_reason": "Coordinates scheduling and quality control of freelance interview experts.",
+      "source_url": "https://barraiser.com/about",
+      "confidence": "medium"
+    },
+    {
+      "id": 13,
+      "company_id": 7,
+      "name": "Vaibhav Antil",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Drives developer adoption strategy and go-to-market motions.",
+      "source_url": "https://privado.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 14,
+      "company_id": 7,
+      "name": "Jasdeep Kang",
+      "role": "Co-Founder & CTO",
+      "persona": "VP of Engineering / CTO",
+      "persona_reason": "Engineers static analysis engine for code repositories.",
+      "source_url": "https://privado.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 15,
+      "company_id": 8,
+      "name": "Prashant Ghildiyal",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Directs open source community monetization and enterprise tier.",
+      "source_url": "https://devtron.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 16,
+      "company_id": 8,
+      "name": "Nishant Kumar",
+      "role": "Co-Founder & CTO",
+      "persona": "VP of Engineering / CTO",
+      "persona_reason": "Leads microservices deployment architecture.",
+      "source_url": "https://devtron.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 17,
+      "company_id": 9,
+      "name": "Arvind Parthiban",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Serial founder (ex-Zarget/Freshworks). Focuses on high-efficiency GTM.",
+      "source_url": "https://superops.com/about",
+      "confidence": "high"
+    },
+    {
+      "id": 18,
+      "company_id": 9,
+      "name": null,
+      "role": "Head of Customer Support Ops",
+      "persona": "Head of Operations",
+      "persona_reason": "Directs MSP ticketing workflows and IT incident routing.",
+      "source_url": "https://superops.com/about",
+      "confidence": "medium"
+    },
+    {
+      "id": 19,
+      "company_id": 10,
+      "name": "Ankit Ratan",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Leads enterprise bank partnerships and compliance investments.",
+      "source_url": "https://signzy.com/about",
+      "confidence": "high"
+    },
+    {
+      "id": 20,
+      "company_id": 10,
+      "name": null,
+      "role": "VP of Client Operations",
+      "persona": "Head of Operations",
+      "persona_reason": "Manages manual video KYC fallbacks and fraud review queues.",
+      "source_url": "https://signzy.com/about",
+      "confidence": "medium"
+    },
+    {
+      "id": 21,
+      "company_id": 11,
+      "name": "Rishen Kapoor",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Pioneers PLG monetization models.",
+      "source_url": "https://toplyne.io/about",
+      "confidence": "high"
+    },
+    {
+      "id": 22,
+      "company_id": 11,
+      "name": "Ruchin Kulkarni",
+      "role": "Co-Founder",
+      "persona": "Head of Operations",
+      "persona_reason": "Directs GTM execution and customer success workflows.",
+      "source_url": "https://toplyne.io/about",
+      "confidence": "high"
+    },
+    {
+      "id": 23,
+      "company_id": 12,
+      "name": "Sneha Roy",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Decides budget allocations for creator workflow and enterprise tools.",
+      "source_url": "https://murf.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 24,
+      "company_id": 12,
+      "name": null,
+      "role": "Head of Customer Experience",
+      "persona": "Head of Operations",
+      "persona_reason": "Oversees billing and licensing approvals for high-volume audio rendering.",
+      "source_url": "https://murf.ai/about",
+      "confidence": "medium"
+    },
+    {
+      "id": 25,
+      "company_id": 13,
+      "name": "Arjun Rasquinha",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Primary decision-maker for platform tooling.",
+      "source_url": "https://zoko.io/about",
+      "confidence": "high"
+    },
+    {
+      "id": 26,
+      "company_id": 14,
+      "name": "Raghu Ravinutala",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Directs global enterprise expansion.",
+      "source_url": "https://yellow.ai/about",
+      "confidence": "high"
+    },
+    {
+      "id": 27,
+      "company_id": 14,
+      "name": null,
+      "role": "VP of Business Operations",
+      "persona": "Head of Operations",
+      "persona_reason": "Manages partner margins and vendor integration overhead.",
+      "source_url": "https://yellow.ai/about",
+      "confidence": "medium"
+    },
+    {
+      "id": 28,
+      "company_id": 15,
+      "name": "Abhinav Asthana",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Executive leadership.",
+      "source_url": "https://postman.com/about",
+      "confidence": "high"
+    },
+    {
+      "id": 29,
+      "company_id": 15,
+      "name": null,
+      "role": "Director of Enterprise Operations",
+      "persona": "Head of Operations",
+      "persona_reason": "Internal systems scaling.",
+      "source_url": "https://postman.com/about",
+      "confidence": "medium"
+    },
+    {
+      "id": 30,
+      "company_id": 16,
+      "name": "Sanket Shah",
+      "role": "Co-Founder & CEO",
+      "persona": "Founder & CEO",
+      "persona_reason": "Drives product AI roadmaps and rapid go-to-market.",
+      "source_url": "https://invideo.io/about",
+      "confidence": "high"
+    },
+    {
+      "id": 31,
+      "company_id": 16,
+      "name": null,
+      "role": "Head of Infrastructure Operations",
+      "persona": "Head of Operations",
+      "persona_reason": "Oversees render cluster load balancing and customer queue latency.",
+      "source_url": "https://invideo.io/about",
+      "confidence": "medium"
+    }
+  ],
+  "scores": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "computed_at": "2026-09-29T07:39:51.674Z",
+      "fit": 95,
+      "timing": 50,
+      "reach": 65,
+      "confidence": "0.72",
+      "total": 62,
+      "reasoning": "Standard operational baseline; Target role: Head of Operations / Chief of Staff; Matches ICP: Series A with 50-200 team in Bengaluru, India."
+    },
+    {
+      "id": 2,
+      "company_id": 2,
+      "computed_at": "2026-09-29T08:43:44.491Z",
+      "fit": 98,
+      "timing": 94,
+      "reach": 92,
+      "confidence": "0.92",
+      "total": 92,
+      "reasoning": "Raised $20M Series B 6 weeks ago; hiring 3 operations & automation roles; Identified Girish Redekar (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru, India."
+    },
+    {
+      "id": 3,
+      "company_id": 3,
+      "computed_at": "2026-09-29T08:43:44.507Z",
+      "fit": 95,
+      "timing": 90,
+      "reach": 88,
+      "confidence": "0.90",
+      "total": 88,
+      "reasoning": "Announced $24M Series B; hired VP of Engineering and recruiting Customer Ops lead; Identified Srikrishnan Ganesan (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Chennai / Bengaluru, India."
+    },
+    {
+      "id": 4,
+      "company_id": 4,
+      "computed_at": "2026-09-29T08:43:44.518Z",
+      "fit": 92,
+      "timing": 92,
+      "reach": 95,
+      "confidence": "0.88",
+      "total": 88,
+      "reasoning": "Raised $12M Series A 30 days ago; opening US expansion office; Identified Achuthanand Ravi (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+    },
+    {
+      "id": 5,
+      "company_id": 5,
+      "computed_at": "2026-09-29T08:43:44.530Z",
+      "fit": 90,
+      "timing": 84,
+      "reach": 82,
+      "confidence": "0.86",
+      "total": 81,
+      "reasoning": "Hiring 2 ops strategy leads; recent expansion into SEA enterprises; Identified Adit Jain (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru, India."
+    },
+    {
+      "id": 6,
+      "company_id": 6,
+      "computed_at": "2026-09-29T08:43:44.538Z",
+      "fit": 88,
+      "timing": 88,
+      "reach": 85,
+      "confidence": "0.85",
+      "total": 82,
+      "reasoning": "Fresh Series A round announced 3 weeks ago; recruiting community ops lead; Identified Avnish Anand (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+    },
+    {
+      "id": 7,
+      "company_id": 7,
+      "computed_at": "2026-09-29T08:43:44.549Z",
+      "fit": 88,
+      "timing": 82,
+      "reach": 90,
+      "confidence": "0.88",
+      "total": 82,
+      "reasoning": "Series A expansion; launched open-source GitHub privacy action; Identified Vaibhav Antil (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+    },
+    {
+      "id": 8,
+      "company_id": 8,
+      "computed_at": "2026-09-29T08:43:44.558Z",
+      "fit": 85,
+      "timing": 80,
+      "reach": 88,
+      "confidence": "0.84",
+      "total": 79,
+      "reasoning": "Series A announced August 2026; hiring cloud support engineers; Identified Prashant Ghildiyal (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+    },
+    {
+      "id": 9,
+      "company_id": 9,
+      "computed_at": "2026-09-29T08:43:44.568Z",
+      "fit": 92,
+      "timing": 78,
+      "reach": 84,
+      "confidence": "0.87",
+      "total": 80,
+      "reasoning": "Revenue ops hiring surge following Series B close; Identified Arvind Parthiban (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru / Chennai, India."
+    },
+    {
+      "id": 10,
+      "company_id": 10,
+      "computed_at": "2026-09-29T08:43:44.577Z",
+      "fit": 86,
+      "timing": 76,
+      "reach": 82,
+      "confidence": "0.85",
+      "total": 76,
+      "reasoning": "Global expansion into MEA; scaling enterprise onboarding ops; Identified Ankit Ratan (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru, India."
+    },
+    {
+      "id": 11,
+      "company_id": 11,
+      "computed_at": "2026-09-29T08:43:44.586Z",
+      "fit": 85,
+      "timing": 72,
+      "reach": 85,
+      "confidence": "0.82",
+      "total": 75,
+      "reasoning": "Launched automated CRM sync v2; expanding data integrations; Identified Rishen Kapoor (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+    },
+    {
+      "id": 12,
+      "company_id": 12,
+      "computed_at": "2026-09-29T08:43:44.593Z",
+      "fit": 82,
+      "timing": 70,
+      "reach": 80,
+      "confidence": "0.81",
+      "total": 71,
+      "reasoning": "Enterprise voice cloning launch; hiring support ops; Identified Sneha Roy (Co-Founder & CEO); Matches ICP: Series A with 20-50 in Bengaluru, India."
+    },
+    {
+      "id": 13,
+      "company_id": 13,
+      "computed_at": "2026-09-29T08:43:44.602Z",
+      "fit": 78,
+      "timing": 68,
+      "reach": 82,
+      "confidence": "0.80",
+      "total": 70,
+      "reasoning": "Merchant base doubled; scaling support automation; Identified Arjun Rasquinha (Co-Founder & CEO); Matches ICP: Seed with 20-50 in Bengaluru, India."
+    },
+    {
+      "id": 14,
+      "company_id": 14,
+      "computed_at": "2026-09-29T08:43:44.610Z",
+      "fit": 68,
+      "timing": 64,
+      "reach": 74,
+      "confidence": "0.86",
+      "total": 65,
+      "reasoning": "No new funding in last 12 months; steady executive recruitment; Identified Raghu Ravinutala (Co-Founder & CEO); Matches ICP: Series C with 200-500 in Bengaluru, India."
+    },
+    {
+      "id": 15,
+      "company_id": 15,
+      "computed_at": "2026-09-29T08:43:44.618Z",
+      "fit": 50,
+      "timing": 52,
+      "reach": 60,
+      "confidence": "0.90",
+      "total": 52,
+      "reasoning": "Mature funding profile; no fresh capital triggers in 2026; Identified Abhinav Asthana (Co-Founder & CEO); Matches ICP: Series D with 500+ in Bengaluru, India."
+    },
+    {
+      "id": 16,
+      "company_id": 16,
+      "computed_at": "2026-09-29T08:43:44.627Z",
+      "fit": 78,
+      "timing": 62,
+      "reach": 75,
+      "confidence": "0.82",
+      "total": 66,
+      "reasoning": "Expanding AI video models; hiring systems engineers; Identified Sanket Shah (Co-Founder & CEO); Matches ICP: Series A with 50-200 in Bengaluru / Mumbai, India."
+    }
+  ],
+  "outreach": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "person_id": 1,
+      "trigger_signal_id": 1,
+      "draft": "Hi team,\n\nNoticed Hasura's Hiring for 2 roles including Senior Operations Manager, AI Automation Engineer. When teams expand this phase, manual data and workflow friction typically slow down head of operations / chief of staff priorities like Manual operational coordination across expanding customer onboarding pipelines. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Head of Operations / Chief of Staff owns the specific operational bottlenecks created by the recent hiring trigger.",
+      "created_at": "2026-09-29T07:39:51.675Z"
+    },
+    {
+      "id": 2,
+      "company_id": 2,
+      "person_id": 2,
+      "trigger_signal_id": 2,
+      "draft": "Hi Girish,\n\nNoticed Sprinto's Raised $20M Series B 6 weeks ago; hiring 3 operations & automation roles. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Manual evidence collection from diverse SaaS customer stacks. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.491Z"
+    },
+    {
+      "id": 3,
+      "company_id": 3,
+      "person_id": 5,
+      "trigger_signal_id": 7,
+      "draft": "Hi Srikrishnan,\n\nNoticed Rocketlane's Announced $24M Series B; hired VP of Engineering and recruiting Customer Ops lead. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Repetitive template synchronization across customer project workspaces. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.507Z"
+    },
+    {
+      "id": 4,
+      "company_id": 4,
+      "person_id": 7,
+      "trigger_signal_id": 12,
+      "draft": "Hi Achuthanand,\n\nNoticed Kula's Raised $12M Series A 30 days ago; opening US expansion office. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Candidate profile enrichment rate-limiting and data drift. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.518Z"
+    },
+    {
+      "id": 5,
+      "company_id": 5,
+      "person_id": 9,
+      "trigger_signal_id": 17,
+      "draft": "Hi Adit,\n\nNoticed Leena AI's Hiring 2 ops strategy leads; recent expansion into SEA enterprises. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Integrating disparate enterprise legacy HRIS systems. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent hiring trigger.",
+      "created_at": "2026-09-29T08:43:44.530Z"
+    },
+    {
+      "id": 6,
+      "company_id": 6,
+      "person_id": 11,
+      "trigger_signal_id": 20,
+      "draft": "Hi Avnish,\n\nNoticed BarRaiser's Fresh Series A round announced 3 weeks ago; recruiting community ops lead. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Interviewer-candidate scheduling conflicts and manual calendar adjustments. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.538Z"
+    },
+    {
+      "id": 7,
+      "company_id": 7,
+      "person_id": 13,
+      "trigger_signal_id": 25,
+      "draft": "Hi Vaibhav,\n\nNoticed Privado's Series A expansion; launched open-source GitHub privacy action. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like High false-positive noise in developer pull request annotations. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.549Z"
+    },
+    {
+      "id": 8,
+      "company_id": 8,
+      "person_id": 15,
+      "trigger_signal_id": 30,
+      "draft": "Hi Prashant,\n\nNoticed Devtron's Series A announced August 2026; hiring cloud support engineers. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Triage overhead for multi-tenant Kubernetes cluster troubleshooting. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.558Z"
+    },
+    {
+      "id": 9,
+      "company_id": 9,
+      "person_id": 17,
+      "trigger_signal_id": 35,
+      "draft": "Hi Arvind,\n\nNoticed SuperOps.ai's Revenue ops hiring surge following Series B close. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Complex billing reconciliation for multi-tier MSP client contracts. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.568Z"
+    },
+    {
+      "id": 10,
+      "company_id": 10,
+      "person_id": 19,
+      "trigger_signal_id": 40,
+      "draft": "Hi Ankit,\n\nNoticed Signzy's Global expansion into MEA; scaling enterprise onboarding ops. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Handling edge-case document failures in automated OCR verification pipelines. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent hiring trigger.",
+      "created_at": "2026-09-29T08:43:44.577Z"
+    },
+    {
+      "id": 11,
+      "company_id": 11,
+      "person_id": 21,
+      "trigger_signal_id": 43,
+      "draft": "Hi Rishen,\n\nNoticed Toplyne's Launched automated CRM sync v2; expanding data integrations. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Product telemetry schema drift breaking downstream scoring models. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent hiring trigger.",
+      "created_at": "2026-09-29T08:43:44.586Z"
+    },
+    {
+      "id": 12,
+      "company_id": 12,
+      "person_id": 23,
+      "trigger_signal_id": 46,
+      "draft": "Hi Sneha,\n\nNoticed Murf.ai's Enterprise voice cloning launch; hiring support ops. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like High compute GPU latency during peak batch text-to-speech rendering. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.593Z"
+    },
+    {
+      "id": 13,
+      "company_id": 13,
+      "person_id": 25,
+      "trigger_signal_id": 51,
+      "draft": "Hi Arjun,\n\nNoticed Zoko's Merchant base doubled; scaling support automation. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Meta WhatsApp Cloud API rate-limiting during seasonal flash sales. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent funding trigger.",
+      "created_at": "2026-09-29T08:43:44.602Z"
+    },
+    {
+      "id": 14,
+      "company_id": 14,
+      "person_id": 26,
+      "trigger_signal_id": 56,
+      "draft": "Hi Raghu,\n\nNoticed Yellow.ai's No new funding in last 12 months; steady executive recruitment. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Multi-vendor model billing consolidation and token cost controls. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent hiring trigger.",
+      "created_at": "2026-09-29T08:43:44.610Z"
+    },
+    {
+      "id": 15,
+      "company_id": 15,
+      "person_id": 28,
+      "trigger_signal_id": 59,
+      "draft": "Hi Abhinav,\n\nNoticed Postman's Mature funding profile; no fresh capital triggers in 2026. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Massive multi-repo developer coordination latency. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent hiring trigger.",
+      "created_at": "2026-09-29T08:43:44.618Z"
+    },
+    {
+      "id": 16,
+      "company_id": 16,
+      "person_id": 30,
+      "trigger_signal_id": 62,
+      "draft": "Hi Sanket,\n\nNoticed InVideo's Expanding AI video models; hiring systems engineers. When teams expand this phase, manual data and workflow friction typically slow down co-founder & ceo priorities like Surging GPU rendering queue spikes during promotional campaigns. Built an automated agent pipeline for similar B2B SaaS stacks—open to a 10-minute teardown of what we could take off your plate this week?",
+      "why_note": "Co-Founder & CEO owns the specific operational bottlenecks created by the recent expansion trigger.",
+      "created_at": "2026-09-29T08:43:44.627Z"
+    }
+  ],
+  "runs": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "started_at": "2026-09-29T07:39:47.818Z",
+      "finished_at": "2026-09-29T07:39:51.676Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "running",
+          "details": "Crawling domain https://hasura.io",
+          "timestamp": "2026-09-29T07:39:47.822Z"
+        },
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 3 public documents with source tiers",
+          "timestamp": "2026-09-29T07:39:51.650Z",
+          "duration_ms": 3828
+        },
+        {
+          "step": "Extraction",
+          "status": "running",
+          "details": "Extracting structured intel and source citations",
+          "timestamp": "2026-09-29T07:39:51.650Z"
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Identified Hasura (Series A, 50-200)",
+          "timestamp": "2026-09-29T07:39:51.651Z",
+          "duration_ms": 1
+        },
+        {
+          "step": "Snapshot",
+          "status": "running",
+          "details": "Querying previous snapshot for diffing",
+          "timestamp": "2026-09-29T07:39:51.665Z"
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Snapshot #1 recorded",
+          "timestamp": "2026-09-29T07:39:51.669Z",
+          "duration_ms": 4
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "running",
+          "details": "Detecting field diffs vs previous snapshot",
+          "timestamp": "2026-09-29T07:39:51.669Z"
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Detected 1 diffs, classified 1 signals",
+          "timestamp": "2026-09-29T07:39:51.671Z",
+          "duration_ms": 2
+        },
+        {
+          "step": "People",
+          "status": "running",
+          "details": "Mapping target decision-makers",
+          "timestamp": "2026-09-29T07:39:51.671Z"
+        },
+        {
+          "step": "People",
+          "status": "completed",
+          "details": "Identified 1 key operational personas",
+          "timestamp": "2026-09-29T07:39:51.673Z",
+          "duration_ms": 2
+        },
+        {
+          "step": "Scoring",
+          "status": "running",
+          "details": "Calculating explainable opportunity score",
+          "timestamp": "2026-09-29T07:39:51.673Z"
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Score computed: 62/100 (Standard operational baseline; Target role: Head of Operations / Chief of Staff; Matches ICP: Series A with 50-200 team in Bengaluru, India.)",
+          "timestamp": "2026-09-29T07:39:51.674Z",
+          "duration_ms": 1
+        },
+        {
+          "step": "Outreach",
+          "status": "running",
+          "details": "Drafting restrained outreach message",
+          "timestamp": "2026-09-29T07:39:51.674Z"
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Draft created with trigger anchor and 3-sentence limit",
+          "timestamp": "2026-09-29T07:39:51.676Z",
+          "duration_ms": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company_id": 2,
+      "started_at": "2026-09-29T08:43:29.502Z",
+      "finished_at": "2026-09-29T08:43:44.502Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://sprinto.com",
+          "timestamp": "2026-09-29T08:43:44.491Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Sprinto (Series B, 50-200)",
+          "timestamp": "2026-09-29T08:43:44.491Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #3",
+          "timestamp": "2026-09-29T08:43:44.491Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.491Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 92/100",
+          "timestamp": "2026-09-29T08:43:44.491Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.491Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "company_id": 3,
+      "started_at": "2026-09-29T08:43:29.514Z",
+      "finished_at": "2026-09-29T08:43:44.514Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://rocketlane.com",
+          "timestamp": "2026-09-29T08:43:44.507Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Rocketlane (Series B, 50-200)",
+          "timestamp": "2026-09-29T08:43:44.507Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #5",
+          "timestamp": "2026-09-29T08:43:44.507Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.507Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 88/100",
+          "timestamp": "2026-09-29T08:43:44.507Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.507Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "company_id": 4,
+      "started_at": "2026-09-29T08:43:29.526Z",
+      "finished_at": "2026-09-29T08:43:44.526Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://kula.ai",
+          "timestamp": "2026-09-29T08:43:44.518Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Kula (Series A, 20-50)",
+          "timestamp": "2026-09-29T08:43:44.518Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #7",
+          "timestamp": "2026-09-29T08:43:44.518Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.518Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 88/100",
+          "timestamp": "2026-09-29T08:43:44.518Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.518Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "company_id": 5,
+      "started_at": "2026-09-29T08:43:29.535Z",
+      "finished_at": "2026-09-29T08:43:44.535Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://leena.ai",
+          "timestamp": "2026-09-29T08:43:44.530Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Leena AI (Series B, 50-200)",
+          "timestamp": "2026-09-29T08:43:44.530Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #9",
+          "timestamp": "2026-09-29T08:43:44.530Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 3 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.530Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 81/100",
+          "timestamp": "2026-09-29T08:43:44.530Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.530Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "company_id": 6,
+      "started_at": "2026-09-29T08:43:29.544Z",
+      "finished_at": "2026-09-29T08:43:44.544Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://barraiser.com",
+          "timestamp": "2026-09-29T08:43:44.538Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted BarRaiser (Series A, 20-50)",
+          "timestamp": "2026-09-29T08:43:44.538Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #11",
+          "timestamp": "2026-09-29T08:43:44.538Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.538Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 82/100",
+          "timestamp": "2026-09-29T08:43:44.538Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.538Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "company_id": 7,
+      "started_at": "2026-09-29T08:43:29.555Z",
+      "finished_at": "2026-09-29T08:43:44.555Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://privado.ai",
+          "timestamp": "2026-09-29T08:43:44.549Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Privado (Series A, 20-50)",
+          "timestamp": "2026-09-29T08:43:44.549Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #13",
+          "timestamp": "2026-09-29T08:43:44.549Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.549Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 82/100",
+          "timestamp": "2026-09-29T08:43:44.549Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.549Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "company_id": 8,
+      "started_at": "2026-09-29T08:43:29.563Z",
+      "finished_at": "2026-09-29T08:43:44.563Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://devtron.ai",
+          "timestamp": "2026-09-29T08:43:44.558Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Devtron (Series A, 20-50)",
+          "timestamp": "2026-09-29T08:43:44.558Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #15",
+          "timestamp": "2026-09-29T08:43:44.558Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.558Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 79/100",
+          "timestamp": "2026-09-29T08:43:44.558Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.558Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "company_id": 9,
+      "started_at": "2026-09-29T08:43:29.574Z",
+      "finished_at": "2026-09-29T08:43:44.574Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://superops.com",
+          "timestamp": "2026-09-29T08:43:44.568Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted SuperOps.ai (Series B, 50-200)",
+          "timestamp": "2026-09-29T08:43:44.568Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #17",
+          "timestamp": "2026-09-29T08:43:44.568Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.568Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 80/100",
+          "timestamp": "2026-09-29T08:43:44.568Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.568Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "company_id": 10,
+      "started_at": "2026-09-29T08:43:29.582Z",
+      "finished_at": "2026-09-29T08:43:44.582Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://signzy.com",
+          "timestamp": "2026-09-29T08:43:44.577Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Signzy (Series B, 50-200)",
+          "timestamp": "2026-09-29T08:43:44.577Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #19",
+          "timestamp": "2026-09-29T08:43:44.577Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 3 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.577Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 76/100",
+          "timestamp": "2026-09-29T08:43:44.577Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.577Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "company_id": 11,
+      "started_at": "2026-09-29T08:43:29.590Z",
+      "finished_at": "2026-09-29T08:43:44.590Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://toplyne.io",
+          "timestamp": "2026-09-29T08:43:44.586Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Toplyne (Series A, 20-50)",
+          "timestamp": "2026-09-29T08:43:44.586Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #21",
+          "timestamp": "2026-09-29T08:43:44.586Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 3 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.586Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 75/100",
+          "timestamp": "2026-09-29T08:43:44.586Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.586Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "company_id": 12,
+      "started_at": "2026-09-29T08:43:29.599Z",
+      "finished_at": "2026-09-29T08:43:44.599Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://murf.ai",
+          "timestamp": "2026-09-29T08:43:44.593Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Murf.ai (Series A, 20-50)",
+          "timestamp": "2026-09-29T08:43:44.593Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #23",
+          "timestamp": "2026-09-29T08:43:44.593Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.593Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 71/100",
+          "timestamp": "2026-09-29T08:43:44.593Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.593Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "company_id": 13,
+      "started_at": "2026-09-29T08:43:29.607Z",
+      "finished_at": "2026-09-29T08:43:44.607Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://zoko.io",
+          "timestamp": "2026-09-29T08:43:44.602Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Zoko (Seed, 20-50)",
+          "timestamp": "2026-09-29T08:43:44.602Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #25",
+          "timestamp": "2026-09-29T08:43:44.602Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 5 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.602Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 70/100",
+          "timestamp": "2026-09-29T08:43:44.602Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.602Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "company_id": 14,
+      "started_at": "2026-09-29T08:43:29.615Z",
+      "finished_at": "2026-09-29T08:43:44.615Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://yellow.ai",
+          "timestamp": "2026-09-29T08:43:44.610Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Yellow.ai (Series C, 200-500)",
+          "timestamp": "2026-09-29T08:43:44.610Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #27",
+          "timestamp": "2026-09-29T08:43:44.610Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 3 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.610Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 65/100",
+          "timestamp": "2026-09-29T08:43:44.610Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.610Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "company_id": 15,
+      "started_at": "2026-09-29T08:43:29.623Z",
+      "finished_at": "2026-09-29T08:43:44.623Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://postman.com",
+          "timestamp": "2026-09-29T08:43:44.618Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted Postman (Series D, 500+)",
+          "timestamp": "2026-09-29T08:43:44.618Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #29",
+          "timestamp": "2026-09-29T08:43:44.618Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 3 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.618Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 52/100",
+          "timestamp": "2026-09-29T08:43:44.618Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.618Z",
+          "duration_ms": 8
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "company_id": 16,
+      "started_at": "2026-09-29T08:43:29.632Z",
+      "finished_at": "2026-09-29T08:43:44.632Z",
+      "status": "completed",
+      "log": [
+        {
+          "step": "Research",
+          "status": "completed",
+          "details": "Fetched 2 public pages from https://invideo.io",
+          "timestamp": "2026-09-29T08:43:44.627Z",
+          "duration_ms": 1250
+        },
+        {
+          "step": "Extraction",
+          "status": "completed",
+          "details": "Extracted InVideo (Series A, 50-200)",
+          "timestamp": "2026-09-29T08:43:44.627Z",
+          "duration_ms": 320
+        },
+        {
+          "step": "Snapshot",
+          "status": "completed",
+          "details": "Saved Snapshot #31",
+          "timestamp": "2026-09-29T08:43:44.627Z",
+          "duration_ms": 15
+        },
+        {
+          "step": "Diff & Signals",
+          "status": "completed",
+          "details": "Classified 4 diff items (Signals + Noise)",
+          "timestamp": "2026-09-29T08:43:44.627Z",
+          "duration_ms": 22
+        },
+        {
+          "step": "Scoring",
+          "status": "completed",
+          "details": "Computed score 66/100",
+          "timestamp": "2026-09-29T08:43:44.627Z",
+          "duration_ms": 10
+        },
+        {
+          "step": "Outreach",
+          "status": "completed",
+          "details": "Drafted trigger-anchored message for Co-Founder & CEO",
+          "timestamp": "2026-09-29T08:43:44.627Z",
+          "duration_ms": 8
+        }
+      ]
+    }
+  ],
+  "config": [
+    {
+      "key": "icp",
+      "value": {
+        "target": "Solo seller of AI automation services",
+        "location": "Bengaluru, India",
+        "size_bands": [
+          "20-50",
+          "50-200"
+        ],
+        "stage_bands": [
+          "Seed",
+          "Series A",
+          "Series B"
+        ],
+        "business_model": "B2B SaaS"
+      }
+    },
+    {
+      "key": "top_n",
+      "value": 5
+    },
+    {
+      "key": "weights",
+      "value": {
+        "fit": 0.35,
+        "reach": 0.3,
+        "timing": 0.35,
+        "base_factor": 0.6,
+        "confidence_factor": 0.4
+      }
+    }
+  ]
+}

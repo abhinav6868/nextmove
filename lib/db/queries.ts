@@ -11,6 +11,7 @@ import {
 } from "./schema";
 import { eq, desc, and } from "drizzle-orm";
 import { DEFAULT_CONFIG } from "../config";
+import fallbackData from "./offline-fallback.json";
 
 /**
  * Get system config value with fallback to defaults
@@ -24,7 +25,11 @@ export async function getConfig<T = unknown>(key: string): Promise<T> {
       return row.value as T;
     }
   } catch (err) {
-    console.error(`Failed to get config key ${key}:`, err);
+    // Fallback to static config
+    const match = fallbackData.config.find((c) => c.key === key);
+    if (match && match.value !== undefined) {
+      return match.value as T;
+    }
   }
 
   if (key === "top_n") return (DEFAULT_CONFIG.top_n as unknown) as T;
@@ -37,51 +42,108 @@ export async function getConfig<T = unknown>(key: string): Promise<T> {
  * Set system config value
  */
 export async function setConfig(key: string, value: unknown) {
-  await db
-    .insert(config)
-    .values({ key, value })
-    .onConflictDoUpdate({
-      target: config.key,
-      set: { value },
-    });
+  try {
+    await db
+      .insert(config)
+      .values({ key, value })
+      .onConflictDoUpdate({
+        target: config.key,
+        set: { value },
+      });
+  } catch (err) {
+    console.warn("Could not persist config to DB (offline mode):", err);
+  }
+}
+
+/**
+ * Helper: parse fallback offline companies list
+ */
+function getOfflineCompaniesWithScores() {
+  return (fallbackData.companies as any[]).map((company) => {
+    const companyScores = (fallbackData.scores as any[]).filter(
+      (s) => s.company_id === company.id
+    );
+    const latestScore = companyScores[companyScores.length - 1] || null;
+
+    const meaningfulSignals = (fallbackData.signals as any[]).filter(
+      (s) => s.company_id === company.id && s.is_meaningful
+    );
+    const topSignal =
+      meaningfulSignals[meaningfulSignals.length - 1] || null;
+
+    const companySnapshots = (fallbackData.snapshots as any[]).filter(
+      (s) => s.company_id === company.id
+    );
+    const latestSnapshot =
+      companySnapshots[companySnapshots.length - 1] || null;
+
+    return {
+      ...company,
+      created_at: new Date(company.created_at),
+      updated_at: new Date(company.updated_at),
+      score: latestScore
+        ? {
+            ...latestScore,
+            computed_at: new Date(latestScore.computed_at),
+          }
+        : null,
+      topSignal: topSignal
+        ? {
+            ...topSignal,
+            detected_at: new Date(topSignal.detected_at),
+          }
+        : null,
+      lastChecked: latestSnapshot
+        ? new Date(latestSnapshot.captured_at)
+        : new Date(company.created_at),
+    };
+  });
 }
 
 /**
  * Get all companies with their latest score and top signal
  */
 export async function getCompaniesWithLatestScore() {
-  const allCompanies = await db.select().from(companies).orderBy(desc(companies.created_at));
+  try {
+    const allCompanies = await db
+      .select()
+      .from(companies)
+      .orderBy(desc(companies.created_at));
 
-  const results = await Promise.all(
-    allCompanies.map(async (company) => {
-      const latestScore = await db.query.scores.findFirst({
-        where: eq(scores.company_id, company.id),
-        orderBy: desc(scores.computed_at),
-      });
+    const results = await Promise.all(
+      allCompanies.map(async (company) => {
+        const latestScore = await db.query.scores.findFirst({
+          where: eq(scores.company_id, company.id),
+          orderBy: desc(scores.computed_at),
+        });
 
-      const topSignal = await db.query.signals.findFirst({
-        where: and(
-          eq(signals.company_id, company.id),
-          eq(signals.is_meaningful, true)
-        ),
-        orderBy: desc(signals.detected_at),
-      });
+        const topSignal = await db.query.signals.findFirst({
+          where: and(
+            eq(signals.company_id, company.id),
+            eq(signals.is_meaningful, true)
+          ),
+          orderBy: desc(signals.detected_at),
+        });
 
-      const latestSnapshot = await db.query.snapshots.findFirst({
-        where: eq(snapshots.company_id, company.id),
-        orderBy: desc(snapshots.captured_at),
-      });
+        const latestSnapshot = await db.query.snapshots.findFirst({
+          where: eq(snapshots.company_id, company.id),
+          orderBy: desc(snapshots.captured_at),
+        });
 
-      return {
-        ...company,
-        score: latestScore || null,
-        topSignal: topSignal || null,
-        lastChecked: latestSnapshot?.captured_at || company.created_at,
-      };
-    })
-  );
+        return {
+          ...company,
+          score: latestScore || null,
+          topSignal: topSignal || null,
+          lastChecked: latestSnapshot?.captured_at || company.created_at,
+        };
+      })
+    );
 
-  return results;
+    return results;
+  } catch (err) {
+    console.warn("Live database query failed, using seeded offline data:", err);
+    return getOfflineCompaniesWithScores();
+  }
 }
 
 /**
@@ -128,16 +190,58 @@ export async function getTodayRankedCompanies(limitN?: number) {
   });
 
   // Attach primary decision-maker and outreach draft for top cards
-  const topWithDetails = await Promise.all(
-    topItems.map(async (company, idx) => {
-      const topPerson = await db.query.people.findFirst({
-        where: eq(people.company_id, company.id),
-      });
+  try {
+    const topWithDetails = await Promise.all(
+      topItems.map(async (company, idx) => {
+        let topPerson = null;
+        let topOutreach = null;
 
-      const topOutreach = await db.query.outreach.findFirst({
-        where: eq(outreach.company_id, company.id),
-        orderBy: desc(outreach.created_at),
-      });
+        try {
+          topPerson = await db.query.people.findFirst({
+            where: eq(people.company_id, company.id),
+          });
+
+          topOutreach = await db.query.outreach.findFirst({
+            where: eq(outreach.company_id, company.id),
+            orderBy: desc(outreach.created_at),
+          });
+        } catch {
+          // offline fallback for details
+          topPerson =
+            (fallbackData.people as any[]).find(
+              (p) => p.company_id === company.id
+            ) || null;
+          topOutreach =
+            (fallbackData.outreach as any[]).find(
+              (o) => o.company_id === company.id
+            ) || null;
+        }
+
+        return {
+          ...company,
+          rank: idx + 1,
+          person: topPerson || null,
+          outreach: topOutreach || null,
+        };
+      })
+    );
+
+    return {
+      top: topWithDetails,
+      dropped: droppedItems,
+      topN,
+      totalWatched: all.length,
+    };
+  } catch {
+    const topWithDetails = topItems.map((company, idx) => {
+      const topPerson =
+        (fallbackData.people as any[]).find(
+          (p) => p.company_id === company.id
+        ) || null;
+      const topOutreach =
+        (fallbackData.outreach as any[]).find(
+          (o) => o.company_id === company.id
+        ) || null;
 
       return {
         ...company,
@@ -145,87 +249,166 @@ export async function getTodayRankedCompanies(limitN?: number) {
         person: topPerson || null,
         outreach: topOutreach || null,
       };
-    })
-  );
+    });
 
-  return {
-    top: topWithDetails,
-    dropped: droppedItems,
-    topN,
-    totalWatched: all.length,
-  };
+    return {
+      top: topWithDetails,
+      dropped: droppedItems,
+      topN,
+      totalWatched: all.length,
+    };
+  }
 }
 
 /**
  * Get full company detail with all relations
  */
 export async function getCompanyDetail(id: number) {
-  const company = await db.query.companies.findFirst({
-    where: eq(companies.id, id),
-  });
+  try {
+    const company = await db.query.companies.findFirst({
+      where: eq(companies.id, id),
+    });
 
-  if (!company) return null;
+    if (!company) return null;
 
-  const companySnapshots = await db.query.snapshots.findMany({
-    where: eq(snapshots.company_id, id),
-    orderBy: desc(snapshots.captured_at),
-  });
+    const companySnapshots = await db.query.snapshots.findMany({
+      where: eq(snapshots.company_id, id),
+      orderBy: desc(snapshots.captured_at),
+    });
 
-  const companySignals = await db.query.signals.findMany({
-    where: eq(signals.company_id, id),
-    orderBy: desc(signals.detected_at),
-  });
+    const companySignals = await db.query.signals.findMany({
+      where: eq(signals.company_id, id),
+      orderBy: desc(signals.detected_at),
+    });
 
-  const companyPeople = await db.query.people.findMany({
-    where: eq(people.company_id, id),
-  });
+    const companyPeople = await db.query.people.findMany({
+      where: eq(people.company_id, id),
+    });
 
-  const companyScores = await db.query.scores.findMany({
-    where: eq(scores.company_id, id),
-    orderBy: desc(scores.computed_at),
-  });
+    const companyScores = await db.query.scores.findMany({
+      where: eq(scores.company_id, id),
+      orderBy: desc(scores.computed_at),
+    });
 
-  const companyOutreach = await db.query.outreach.findMany({
-    where: eq(outreach.company_id, id),
-    orderBy: desc(outreach.created_at),
-  });
+    const companyOutreach = await db.query.outreach.findMany({
+      where: eq(outreach.company_id, id),
+      orderBy: desc(outreach.created_at),
+    });
 
-  return {
-    ...company,
-    snapshots: companySnapshots,
-    signals: companySignals,
-    people: companyPeople,
-    score: companyScores[0] || null,
-    scores: companyScores,
-    outreach: companyOutreach[0] || null,
-  };
+    return {
+      ...company,
+      snapshots: companySnapshots,
+      signals: companySignals,
+      people: companyPeople,
+      score: companyScores[0] || null,
+      scores: companyScores,
+      outreach: companyOutreach[0] || null,
+    };
+  } catch (err) {
+    console.warn("DB query error in getCompanyDetail, using fallback:", err);
+    const company = (fallbackData.companies as any[]).find((c) => c.id === id);
+    if (!company) return null;
+
+    const companySnapshots = (fallbackData.snapshots as any[])
+      .filter((s) => s.company_id === id)
+      .map((s) => ({ ...s, captured_at: new Date(s.captured_at) }));
+
+    const companySignals = (fallbackData.signals as any[])
+      .filter((s) => s.company_id === id)
+      .map((s) => ({ ...s, detected_at: new Date(s.detected_at) }));
+
+    const companyPeople = (fallbackData.people as any[]).filter(
+      (p) => p.company_id === id
+    );
+
+    const companyScores = (fallbackData.scores as any[])
+      .filter((s) => s.company_id === id)
+      .map((s) => ({ ...s, computed_at: new Date(s.computed_at) }));
+
+    const companyOutreach = (fallbackData.outreach as any[])
+      .filter((o) => o.company_id === id)
+      .map((o) => ({ ...o, created_at: new Date(o.created_at) }));
+
+    return {
+      ...company,
+      created_at: new Date(company.created_at),
+      updated_at: new Date(company.updated_at),
+      snapshots: companySnapshots,
+      signals: companySignals,
+      people: companyPeople,
+      score: companyScores[0] || null,
+      scores: companyScores,
+      outreach: companyOutreach[0] || null,
+    };
+  }
 }
 
 /**
  * Get full change feed (signals vs noise)
  */
 export async function getChangeFeed() {
-  const allSignals = await db.query.signals.findMany({
-    orderBy: desc(signals.detected_at),
-    with: {
-      company: true,
-    },
-  });
+  try {
+    const allSignals = await db.query.signals.findMany({
+      orderBy: desc(signals.detected_at),
+      with: {
+        company: true,
+      },
+    });
 
-  return allSignals;
+    return allSignals;
+  } catch (err) {
+    console.warn("DB query error in getChangeFeed, using fallback:", err);
+    return (fallbackData.signals as any[]).map((sig) => {
+      const comp = (fallbackData.companies as any[]).find(
+        (c) => c.id === sig.company_id
+      );
+      return {
+        ...sig,
+        detected_at: new Date(sig.detected_at),
+        company: comp
+          ? {
+              ...comp,
+              created_at: new Date(comp.created_at),
+              updated_at: new Date(comp.updated_at),
+            }
+          : null,
+      };
+    });
+  }
 }
 
 /**
  * Get execution runs log
  */
 export async function getRunsLog() {
-  const allRuns = await db.query.runs.findMany({
-    orderBy: desc(runs.started_at),
-    with: {
-      company: true,
-    },
-    limit: 50,
-  });
+  try {
+    const allRuns = await db.query.runs.findMany({
+      orderBy: desc(runs.started_at),
+      with: {
+        company: true,
+      },
+      limit: 50,
+    });
 
-  return allRuns;
+    return allRuns;
+  } catch (err) {
+    console.warn("DB query error in getRunsLog, using fallback:", err);
+    return (fallbackData.runs as any[]).map((r) => {
+      const comp = (fallbackData.companies as any[]).find(
+        (c) => c.id === r.company_id
+      );
+      return {
+        ...r,
+        started_at: new Date(r.started_at),
+        finished_at: r.finished_at ? new Date(r.finished_at) : null,
+        company: comp
+          ? {
+              ...comp,
+              created_at: new Date(comp.created_at),
+              updated_at: new Date(comp.updated_at),
+            }
+          : null,
+      };
+    });
+  }
 }
