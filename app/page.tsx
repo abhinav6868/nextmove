@@ -92,15 +92,15 @@ export default async function HomePage() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[12px] font-mono font-medium mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            <span>Daily Sales Intelligence Brief for Solo AI Automation Sellers</span>
+            <span>Autonomous Timing Engine for Solo B2B Founders</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-semibold tracking-[-0.035em] text-text leading-[1.08]">
-            The sales intelligence brief built for AI.
+            Know the exact day an account is ready to buy.
           </h1>
 
           <p className="mt-5 text-[16px] sm:text-[18px] text-text-muted leading-relaxed max-w-2xl mx-auto font-normal">
-            Nextmove tells you which Indian B2B SaaS startups to act on today, who to contact, and what to say. Grounded in dated public snapshots, real diffs, and pure mathematical scoring. No guesswork, no generic AI slop.
+            Nextmove surfaces high-conviction Indian B2B SaaS accounts undergoing operational trigger events. Grounded in dated public snapshots, temporal diffs, and pure mathematical scoring. Zero guesswork, zero AI slop.
           </p>
 
           {/* CTA Buttons */}
@@ -120,13 +120,13 @@ export default async function HomePage() {
             </Link>
           </div>
 
-          {/* Value Pillars */}
+          {/* Value Pillars & Evaluation Transparency */}
           <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[12px] font-mono text-text-faint">
             <span>Focus mode (Top 5)</span>
             <span>·</span>
             <span>Indian B2B SaaS (Series A–B)</span>
             <span>·</span>
-            <span>100% public data</span>
+            <span>Seeded Assessment Dataset</span>
             <span>·</span>
             <span>1-click clipboard copy</span>
           </div>

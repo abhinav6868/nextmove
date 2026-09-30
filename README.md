@@ -22,11 +22,11 @@ flowchart TD
     end
 
     subgraph Pipeline["2. Pure Functional Pipeline (/lib/pipeline)"]
-        Research["research.ts\n(Scrape domain, /about, /careers, press)"] --> Extract["extract.ts\n(Claude 3.5 Sonnet / Zod Schema Validation)"]
+        Research["research.ts\n(Scrape domain, /about, /careers, press)"] --> Extract["extract.ts\n(Structured LLM Extraction / Zod Schema Validation)"]
         Extract --> Rel["reliability.ts\n(Source tiers 1-4 & Conflict Engine)"]
         Rel --> Snap["Snapshots Table\n(Append-only snapshot A vs B)"]
-        Snap --> Diff["diff.ts\n(Field-level diff detection)"]
         Diff --> Classify["classify.ts\n(Classify: Signal vs Noise + Urgency)"]
+        Snap --> Diff["diff.ts\n(Field-level diff detection)"]
         Classify --> Score["score.ts\n(Pure Math: Timing, Fit, Reach, Confidence)"]
         Classify --> People["people.ts\n(Target personas & grounding)"]
         People --> Outreach["outreach.ts\n(3-sentence trigger-anchored draft)"]
@@ -61,12 +61,12 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
 |---|---|---|
 | **A1** | **Target User & ICP**: Solo seller of AI automation services targeting Indian B2B SaaS startups (Series A–B, 20–200 headcount, Bengaluru first). | Grounds all Fit math, pain point modeling, and outreach messaging in operational scaling bottlenecks rather than generic marketing fluff. |
 | **A2** | **Strictly Public Data**: Only public data is ingested (company domains, team pages, careers boards, registries, press). | Zero reliance on authenticated login scrapers or terms-of-service violating bots. |
-| **A3** | **Timing Outweighs Fit**: Opportunity scoring prioritizes fresh, actionable triggers over static theoretical fit. | A company that just closed $20M Series B and posted 3 ops roles is 10x more actionable today than a perfect-fit company that hasn't changed in two years. |
+| **A3** | **Timing Governs Daily Prioritization**: While ICP Fit and Timing carry equal base weighting (35% each), Timing acts as the dynamic gatekeeper. | An ICP-qualified company that closed a funding round and posted 3 ops roles this month is actionable today; an equally qualified company that hasn't changed in two years yields sub-1% cold reply rates. |
 | **A4** | **Append-Only Snapshots**: Data is stored as timestamped snapshots, never overwritten. | Essential for Task 6 diffing; trigger detection requires comparing Snapshot $A$ vs Snapshot $B$ across historical time points. |
 | **A5** | **Evidence & Source Tiers**: Every claim carries a source URL, source tier (1–4), and confidence score. | Enables automated conflict resolution when reporting dates or funding amounts clash across sources. |
 | **A6** | **Config-Driven Output**: Output size (Top N) is dynamically configurable (Top 5 vs Top 10) with an automated "Dropped today" rationale list. | Solves Task 9 requirement change with zero code modifications or redeployments. |
 | **A7** | **PostgreSQL Backbone**: Schema defined via Drizzle ORM on PostgreSQL with strict relations. | Production-grade relational integrity with index-backed JSONB queries. |
-| **A8** | **Dual-Engine Pipeline Resilience**: Cheerio crawler + Claude 3.5 Sonnet extraction with Zod schema validation; deterministic fallback ensures 100% real data without mock placeholders. | Operates reliably even under API rate limits or network blocks. |
+| **A8** | **Dual-Engine Pipeline Resilience**: Multi-source crawler + structured LLM extraction (Claude/Gemini) with Zod schema validation; rule-based deterministic fallback ensures reproducible evaluation without mock placeholders. | Operates reliably even under API rate limits, network blocks, or offline evaluation environments. |
 
 ---
 
@@ -76,7 +76,7 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
 - **Implementation**: `/company/[id]` shows structured stage, size band, tech signals, verified source citations, likely operational pains, and "What to know before approaching".
 - **Evidence Transparency**: Every field is accompanied by its source tier, extraction date, and direct citation URL.
 - **Screenshot**:
-![Company Detail View](company_screen.png)
+![Company Detail View](docs/screens/company_screen.png)
 
 ---
 
@@ -84,21 +84,26 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
 - **Implementation**: Real-time opportunity score (0–100) combining three weighted sub-scores:
   $$\text{base} = 0.35 \cdot \text{Timing} + 0.35 \cdot \text{Fit} + 0.30 \cdot \text{Reach}$$
   $$\text{total} = \text{round}\Big(\text{base} \times (0.6 + 0.4 \cdot \text{Confidence})\Big)$$
-- **Explainability**: Pure deterministic TypeScript code (`/lib/pipeline/score.ts`) calculates the score—never an opaque LLM prompt. Every account provides a single-sentence rationale (e.g., *"Raised $20M Series B 6 weeks ago; hiring 3 operations & automation roles; Identified Girish Redekar (Co-Founder & CEO); Matches ICP: Series B with 50-200 in Bengaluru, India."*).
+- **Explainability**: Pure deterministic TypeScript code (`/lib/pipeline/score.ts`) calculates the score—never an opaque LLM prompt. Every account provides a single-sentence rationale (e.g., *"Raised $20M Series B 6 weeks ago; hiring 3 operations & automation roles; Identified Raghuveer K (Co-Founder & CTO); Matches ICP: Series B with 50-200 in Bengaluru, India."*).
 
 ---
 
 ### Task 3: Right Person
-- **Implementation**: Target persona matching (`/lib/pipeline/people.ts`) identifies key operational decision-makers (Head of Operations, CTO, CEO, COO).
+- **Implementation**: Target persona matching (`/lib/pipeline/people.ts`) identifies key operational decision-makers (Head of Operations, Director of Ops, CTO, CEO).
 - **Anti-Hallucination Rule**: Never invents names (e.g. no "John Doe"). If a named person is verified from the team/about page, their name is displayed with High confidence; if only a role is identified from job postings, the role title is output with Medium confidence alongside a persona rationale.
+- **Functional Persona Diversity**: Rather than defaulting every account to the CEO, outreach targets the specific leader owning the trigger bottleneck:
+  - **Director / Head of Operations** for evidence collection and workflow scaling (Sprinto, BarRaiser, Leena AI, SuperOps.ai).
+  - **CTO / VP Engineering** for API integrations and data pipeline synchronization (Rocketlane, Devtron).
+  - **Head of RevOps** for CRM sync and reverse-ETL automation (Toplyne).
+  - **Founder & CEO** where appropriate for agile teams under 50 people (Kula, Privado).
 
 ---
 
 ### Task 4: Outreach
 - **Implementation**: Trigger-anchored 3-sentence outreach draft strictly enforced by code (`/lib/pipeline/outreach.ts`):
-  1. **Sentence 1 (Trigger)**: Anchored directly to a dated event (e.g., *"Noticed Sprinto announced a $20M Series B lead by Accel and is scaling compliance ops roles."*).
-  2. **Sentence 2 (Bottleneck)**: Identifies a concrete operational scaling choke point (e.g., *"Given your surge in mid-market SOC2 audits, manual reviewer queues become the primary scaling choke point."*).
-  3. **Sentence 3 (Low-friction ask)**: One clear, specific call-to-action (e.g., *"We built an AI automation module that pre-triages audit evidence—worth 10 minutes next Tuesday?"*).
+  1. **Sentence 1 (Trigger)**: Anchored directly to a dated event (e.g., *"Noticed Sprinto recently announced its $20M Series B and is scaling operational headcount."*).
+  2. **Sentence 2 (Bottleneck)**: Identifies a concrete operational scaling choke point tailored to persona (e.g., *"Given your surge in mid-market SOC2 audits, manual reviewer queues and evidence collection typically become the primary scaling choke point."*).
+  3. **Sentence 3 (Low-friction ask)**: One clear, specific call-to-action (e.g., *"We built a lightweight automation module that pre-triages audit evidence—worth 10 minutes next Tuesday?"*).
 - **Clipboard Ergonomics**: 1-click clipboard copy button with keyboard shortcut (<kbd>C</kbd>).
 
 ---
@@ -110,7 +115,7 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
   - Periodic polling of `/api/refresh`.
   - Immutable execution logging displayed in `/runs`.
 - **Screenshot**:
-![Runs View](runs_screen.png)
+![Runs View](docs/screens/runs_screen.png)
 
 ---
 
@@ -120,7 +125,7 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
   - **Actionable Signals**: Capital raises, leadership appointments, operations hiring surges, product launches.
   - **Filtered Noise**: Landing page copy revisions, minor CSS tweaks, routine blog articles.
 - **Screenshot**:
-![Changes Feed](changes_screen.png)
+![Changes Feed](docs/screens/changes_screen.png)
 
 ---
 
@@ -132,8 +137,9 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
   - **Tier 4 (0.2)**: Social media announcements (X/Twitter).
 - **Conflict Rule**: Higher tier always supersedes lower tier. If two Tier 1/2 sources disagree, both values are displayed side-by-side with superseded labels and `needs_review: true`.
 - **Example in App**: On Sprinto:
-  `Headcount: 140 employees · Tier 1 (MCA filing) · High confidence` with an expandable dropdown showing:
+  `Headcount: 140 employees · Tier 1 (Official Careers Portal / Disclosures) · High confidence` with an expandable dropdown showing:
   `Other values: 95 employees (historical press release, superseded)`.
+  *(Note on Attribution: Statutory MCA filings verify authorized/paid-up capital, corporate status, and director appointments; live employee headcount is sourced from official careers portal disclosures and verified LinkedIn Insights).*
 
 ---
 
@@ -142,7 +148,7 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
   - **Left Column**: Ranked card stream with rank badges (`[01]`), score progress bars, trigger pills, contact details, and keyboard shortcuts (<kbd>J</kbd>/<kbd>K</kbd> to move, <kbd>C</kbd> to copy, <kbd>↵</kbd> for intel).
   - **Right Column**: Sticky live detail drawer reflecting the active card in real time with scoring breakdown, verified contact, and outreach draft.
 - **Screenshot**:
-![Today View](today_screen.png)
+![Today View](docs/screens/today_screen.png)
 
 ---
 
@@ -153,24 +159,26 @@ All assumptions are logged and defended in [`docs/ASSUMPTIONS.md`](file:///Users
 
 ---
 
-## 4. Scoring Model & Why Timing Outweighs Fit
+## 4. Scoring Model: Why Timing Governs Daily Prioritization
 
 ```
 base  = 0.35·Timing + 0.35·Fit + 0.30·Reach
 total = round(base × (0.6 + 0.4·Confidence))
 ```
 
-### Why Timing is Weighted Highest (35%)
-A solo seller's most constrained asset is time. Reaching out to a "perfect fit" startup that has had zero organizational changes in two years yields generic cold emails with sub-1% reply rates. 
+### The Dynamic Gatekeeper Role of Timing (35% Timing, 35% Fit, 30% Reach)
+Timing and ICP Fit carry equal base weighting (35% each), while Reachability accounts for 30%. However, **Timing acts as the dynamic gatekeeper for daily prioritization**. 
 
-When a company raises fresh capital (Series B) or hires 3 operations managers, they have immediate budget, are experiencing acute scaling bottlenecks, and have a mandate to fix workflow throughput *this quarter*. Timing provides the trigger anchor that makes cold outreach relevant, timely, and defensible.
+A company's ICP Fit is largely static over quarters (a Series B B2B SaaS startup with 100 people remains an ICP fit for months). Reaching out to an ICP-fit company that has had zero organizational changes in two years yields generic cold outreach and sub-1% reply rates. 
+
+In contrast, **Timing decays exponentially with a 14-day half-life**. When a company closes fresh capital or posts 3 ops roles, they have immediate budget, acute bottleneck pressure, and an active mandate to fix workflow throughput *this quarter*. Therefore, fresh timing triggers dictate *which* qualified accounts surface in Today's top 10 queue.
 
 ---
 
 ## 5. Limits and Honest Failures
 
 1. **Scrape Restrictions & Anti-Bot WAFs**: Cloudflare or bot protection on select company landing pages can block plain HTTP fetch requests. Nextmove handles this gracefully: falling back to search snippets, dampening data confidence from High to Low, and displaying this status transparently rather than hallucinating facts.
-2. **Demonstration Snapshots Seeding**: To demonstrate diffing and trigger classification on Day 1 without waiting 60 days, historical Snapshot $A$ baselines were created alongside live Snapshot $B$ records for the 16 seeded Indian B2B SaaS companies.
+2. **Demonstration Assessment Dataset**: To evaluate diffing and trigger classification on Day 1 without waiting 60 days, historical Snapshot $A$ baselines were created alongside live Snapshot $B$ records for the 16 seeded Indian B2B SaaS companies.
 3. **LinkedIn Scraping Boundaries**: Compliant with PRD non-goals, no authenticated LinkedIn scraping is performed. When named contacts are absent from public pages, only verified role titles are displayed.
 
 ---
@@ -185,8 +193,8 @@ When a company raises fresh capital (Series B) or hires 3 operations managers, t
 
 ## 7. How AI Tools Were Used
 
-- **Google Antigravity**: Full-stack architecture orchestration, Drizzle schema & migrations, pure pipeline authoring (`/lib/pipeline`), restyled UI components, test suite implementation, and headless Chrome browser verification against the `02_DESIGN.md` anti-slop rules.
-- **Claude 3.5 Sonnet / Anthropic SDK**: Structured fact extraction from unstructured web content and signal vs noise classification with strict Zod schema validation.
+- **Google Antigravity & Gemini**: Full-stack architecture orchestration, Drizzle schema & migrations, pure pipeline authoring (`/lib/pipeline`), restyled UI components, test suite implementation, and headless Chrome browser verification against the `02_DESIGN.md` anti-slop rules.
+- **Provider-Agnostic LLM Engine**: Structured fact extraction from unstructured web content and signal vs noise classification designed with strict Zod schema validation, supporting Anthropic Claude and Google Gemini with deterministic local fallbacks.
 
 ---
 
@@ -195,7 +203,7 @@ When a company raises fresh capital (Series B) or hires 3 operations managers, t
 ```bash
 # 1. Clone the repository
 git clone https://github.com/abhinav6868/nextmove.git
-cd nextmove/docs
+cd nextmove
 
 # 2. Install dependencies
 npm install

@@ -215,28 +215,45 @@ export async function getTodayRankedCompanies(limitN?: number) {
   try {
     const topWithDetails = await Promise.all(
       topItems.map(async (company, idx) => {
-        let topPerson = null;
-        let topOutreach = null;
+        let topPerson: any = null;
+        let topOutreach: any = null;
 
         try {
-          topPerson = await db.query.people.findFirst({
-            where: eq(people.company_id, company.id),
-          });
-
           topOutreach = await db.query.outreach.findFirst({
             where: eq(outreach.company_id, company.id),
             orderBy: desc(outreach.created_at),
           });
+
+          if (topOutreach?.person_id) {
+            topPerson = await db.query.people.findFirst({
+              where: eq(people.id, topOutreach.person_id),
+            });
+          }
+
+          if (!topPerson) {
+            topPerson = await db.query.people.findFirst({
+              where: eq(people.company_id, company.id),
+            });
+          }
         } catch {
           // offline fallback for details
-          topPerson =
-            (fallbackData.people as any[]).find(
-              (p) => p.company_id === company.id
-            ) || null;
           topOutreach =
             (fallbackData.outreach as any[]).find(
               (o) => o.company_id === company.id
             ) || null;
+
+          if (topOutreach?.person_id) {
+            topPerson = (fallbackData.people as any[]).find(
+              (p) => p.id === topOutreach.person_id
+            );
+          }
+
+          if (!topPerson) {
+            topPerson =
+              (fallbackData.people as any[]).find(
+                (p) => p.company_id === company.id
+              ) || null;
+          }
         }
 
         return {
@@ -256,14 +273,23 @@ export async function getTodayRankedCompanies(limitN?: number) {
     };
   } catch {
     const topWithDetails = topItems.map((company, idx) => {
-      const topPerson =
-        (fallbackData.people as any[]).find(
-          (p) => p.company_id === company.id
-        ) || null;
       const topOutreach =
         (fallbackData.outreach as any[]).find(
           (o) => o.company_id === company.id
         ) || null;
+
+      let topPerson = null;
+      if (topOutreach?.person_id) {
+        topPerson = (fallbackData.people as any[]).find(
+          (p) => p.id === topOutreach.person_id
+        );
+      }
+      if (!topPerson) {
+        topPerson =
+          (fallbackData.people as any[]).find(
+            (p) => p.company_id === company.id
+          ) || null;
+      }
 
       return {
         ...company,

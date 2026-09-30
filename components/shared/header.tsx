@@ -71,6 +71,11 @@ export function Header({
               );
             })}
           </nav>
+
+          <div className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-2/80 border border-hairline text-[11px] font-mono text-text-muted">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Assessment Evaluation Dataset</span>
+          </div>
         </div>
 
         {/* Right: Actions, Command Palette, Focus Toggle, Theme */}

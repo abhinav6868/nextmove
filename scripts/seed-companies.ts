@@ -619,11 +619,11 @@ async function seedDatabase() {
     const companyId = companyRecord.id;
 
     // 2. Clear previous data for this company to allow idempotent re-seeding
+    await db.delete(outreach).where(eq(outreach.company_id, companyId));
     await db.delete(signals).where(eq(signals.company_id, companyId));
+    await db.delete(scores).where(eq(scores.company_id, companyId));
     await db.delete(snapshots).where(eq(snapshots.company_id, companyId));
     await db.delete(people).where(eq(people.company_id, companyId));
-    await db.delete(scores).where(eq(scores.company_id, companyId));
-    await db.delete(outreach).where(eq(outreach.company_id, companyId));
 
     // 3. Create Historical Snapshot A (60 days ago)
     const dateA = new Date(Date.now() - 60 * 24 * 60 * 60 * 1000);
@@ -814,7 +814,18 @@ async function seedDatabase() {
     });
 
     // 8. Outreach Draft (Task 4)
-    const primaryPerson = savedPeopleRecords[0];
+    // Select the most strategic operational persona rather than defaulting to CEO
+    let primaryPerson = savedPeopleRecords.find(
+      (p) =>
+        /ops|operation/i.test(p.role) ||
+        /cto|engineering/i.test(p.role) ||
+        /ops|operation/i.test(p.persona)
+    );
+    // For early-stage companies under 50 people, CEO is the legitimate primary buyer
+    if (!primaryPerson || target.name === "Kula" || target.name === "Privado" || target.name === "Zoko") {
+      primaryPerson = savedPeopleRecords[0];
+    }
+
     const draft = generateOutreachDraft({
       companyName: target.name,
       personName: primaryPerson?.name || null,
