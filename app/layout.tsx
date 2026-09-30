@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   title: "Nextmove — Daily Sales Intelligence Brief",
   description:
     "A daily sales-intelligence brief. It tells one person which companies to act on today, who to contact, and what to say, and shows its reasoning.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

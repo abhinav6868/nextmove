@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { getTodayRankedCompanies } from "@/lib/db/queries";
 import { InteractiveHeroDeck } from "@/components/home/interactive-hero-deck";
+import { NextmoveLogo } from "@/components/shared/logo";
 
 export const dynamic = "force-dynamic";
 
@@ -40,10 +41,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-              <span className="w-2.5 h-2.5 rounded-full bg-accent" />
-              <span className="font-semibold text-[15px] tracking-tight text-text">
-                Nextmove
-              </span>
+              <NextmoveLogo size={22} showText />
             </Link>
 
             <nav className="hidden md:flex items-center gap-6 text-[13px] text-text-muted">
@@ -542,7 +540,7 @@ export default async function HomePage() {
       <footer className="border-t border-hairline py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-[12px] text-text-muted gap-4">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-accent" />
+            <NextmoveLogo size={18} />
             <span className="font-medium text-text">Nextmove</span>
             <span>— Candidate Test Build for Product Engineer</span>
           </div>

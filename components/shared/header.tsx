@@ -8,6 +8,7 @@ import { Kbd } from "@/components/ui/kbd";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Plus, RefreshCw, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { NextmoveLogo } from "./logo";
 
 interface HeaderProps {
   onOpenCommand?: () => void;
@@ -46,10 +47,7 @@ export function Header({
             href="/today"
             className="flex items-center gap-2 group cursor-pointer"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-accent" />
-            <span className="font-semibold text-[15px] tracking-tight text-text">
-              Nextmove
-            </span>
+            <NextmoveLogo size={22} showText />
           </Link>
 
           <nav className="hidden sm:flex items-center gap-1">
