@@ -5,8 +5,9 @@
 
 Built for the **Product Engineer candidate test**. Designed with strict restraint: zero AI slop, no purple/blue gradients, no emojis as icons, hairline 1px borders, and pure data density.
 
+- **Live Production URL**: [https://docs-zeta-eight-54.vercel.app](https://docs-zeta-eight-54.vercel.app)
 - **GitHub Repository**: [https://github.com/abhinav6868/nextmove](https://github.com/abhinav6868/nextmove)
-- **Local Application URL**: `http://localhost:3000` (Production port: 3000)
+- **Local Application URL**: `http://localhost:3000`
 
 ---
 
