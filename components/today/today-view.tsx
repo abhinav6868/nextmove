@@ -173,9 +173,10 @@ export function TodayView({
   };
 
   const activeTop = top.filter((c) => !snoozedIds.has(c.id));
+  const selected = activeTop[selectedIndex] || activeTop[0];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Sub Header / Context Line */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-hairline gap-3">
         <div className="font-mono text-[12px] text-text-faint tracking-tight">
@@ -203,13 +204,22 @@ export function TodayView({
             <Kbd>J</Kbd>
             <Kbd>K</Kbd>
             <span>to move</span>
+            <span className="mx-1">·</span>
+            <Kbd>C</Kbd>
+            <span>to copy</span>
+            <span className="mx-1">·</span>
+            <Kbd>↵</Kbd>
+            <span>intel</span>
           </div>
         </div>
       </div>
 
-      {/* Main List of Ranked Cards */}
-      <div className="space-y-4">
-        {activeTop.length === 0 ? (
+      {/* Dual Column Layout: Left Cards (7 cols) + Right Live Intel Drawer (5 cols) */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Left Column: Ranked Cards Stream & Dropped Today */}
+        <div className="lg:col-span-7 space-y-6">
+          <div className="space-y-4">
+            {activeTop.length === 0 ? (
           <div className="rounded-[12px] border border-hairline bg-surface p-12 text-center">
             <p className="text-text-muted text-[14px]">
               No companies yet. Paste a URL or press <Kbd>⌘K</Kbd>.
@@ -456,6 +466,165 @@ export function TodayView({
           )}
         </div>
       )}
+        </div>
+
+        {/* Right Column: Sticky Live Detail & Intelligence Drawer */}
+        <div className="hidden lg:block lg:col-span-5 sticky top-20">
+          {selected ? (
+            <div className="rounded-[16px] border border-hairline bg-surface p-6 shadow-xs space-y-6">
+                  {/* Selected Company Header */}
+                  <div className="flex items-start justify-between pb-4 border-b border-hairline">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-[11px] text-text-faint">
+                          RANK #{String(selected.rank).padStart(2, "0")}
+                        </span>
+                        <span className="text-text-faint font-mono">·</span>
+                        <span className="font-mono text-[11px] text-accent font-semibold">
+                          Active Selection
+                        </span>
+                      </div>
+                      <h2 className="text-[20px] font-semibold text-text tracking-tight mt-1">
+                        {selected.name}
+                      </h2>
+                      <div className="font-mono text-[12px] text-text-muted mt-0.5">
+                        {selected.stage} · {selected.size_band} · {selected.industry}
+                      </div>
+                    </div>
+
+                    <ScoreBadge score={selected.score?.total || 0} size="lg" />
+                  </div>
+
+                  {/* Explainable Scoring Breakdown */}
+                  <div>
+                    <div className="flex items-center justify-between text-[11px] font-mono text-text-faint mb-2">
+                      <span className="uppercase font-semibold tracking-wider">
+                        Opportunity Scoring
+                      </span>
+                      <span>Confidence: {selected.score?.confidence || "Medium"}</span>
+                    </div>
+
+                    <div className="space-y-2 text-[12px]">
+                      <div>
+                        <div className="flex justify-between text-[11px] font-mono text-text-muted mb-1">
+                          <span>Timing (35%)</span>
+                          <span className="font-semibold text-text">
+                            {selected.score?.timing || 85} / 100
+                          </span>
+                        </div>
+                        <div className="w-full h-1.5 rounded-full bg-surface-2 overflow-hidden">
+                          <div
+                            className="h-full rounded-full bg-accent"
+                            style={{ width: `${selected.score?.timing || 85}%` }}
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <div className="flex justify-between text-[11px] font-mono text-text-muted mb-1">
+                          <span>Fit (35%)</span>
+                          <span className="font-semibold text-text">
+                            {selected.score?.fit || 80} / 100
+                          </span>
+                        </div>
+                        <div className="w-full h-1.5 rounded-full bg-surface-2 overflow-hidden">
+                          <div
+                            className="h-full rounded-full bg-accent"
+                            style={{ width: `${selected.score?.fit || 80}%` }}
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <div className="flex justify-between text-[11px] font-mono text-text-muted mb-1">
+                          <span>Reach (30%)</span>
+                          <span className="font-semibold text-text">
+                            {selected.score?.reach || 80} / 100
+                          </span>
+                        </div>
+                        <div className="w-full h-1.5 rounded-full bg-surface-2 overflow-hidden">
+                          <div
+                            className="h-full rounded-full bg-accent"
+                            style={{ width: `${selected.score?.reach || 80}%` }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {selected.score?.reasoning && (
+                      <p className="mt-3 text-[12px] text-text-muted italic bg-surface-2/40 p-2.5 rounded-[8px] border border-hairline/80 leading-relaxed">
+                        &quot;{selected.score.reasoning}&quot;
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Target Person */}
+                  {selected.person && (
+                    <div className="pt-4 border-t border-hairline space-y-1.5">
+                      <div className="text-[11px] font-mono uppercase tracking-wider text-text-faint font-semibold">
+                        Target Decision-Maker
+                      </div>
+                      <div className="text-[14px] font-semibold text-text">
+                        {selected.person.name || selected.person.role}
+                      </div>
+                      <div className="text-[12px] font-mono text-text-muted">
+                        {selected.person.role} · {selected.person.persona}
+                      </div>
+                      <div className="text-[12px] text-text-muted leading-relaxed">
+                        {selected.person.persona_reason}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 3-Sentence Outreach Pitch */}
+                  {selected.outreach && (
+                    <div className="pt-4 border-t border-hairline space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-accent font-semibold">
+                          3-Sentence Outreach Draft
+                        </span>
+                        <button
+                          onClick={() =>
+                            handleCopyDraft(selected.id, selected.outreach!.draft)
+                          }
+                          className="text-[11px] font-mono text-accent hover:underline flex items-center gap-1 cursor-pointer"
+                        >
+                          <Copy className="w-3 h-3" />
+                          <span>{copiedId === selected.id ? "Copied!" : "Copy (C)"}</span>
+                        </button>
+                      </div>
+
+                      <div className="p-3.5 rounded-[10px] bg-surface-2/60 border border-hairline text-[12px] text-text leading-relaxed">
+                        {selected.outreach.draft}
+                      </div>
+
+                      {selected.outreach.why_note && (
+                        <div className="text-[11px] text-text-faint font-mono">
+                          <span className="font-semibold text-text-muted mr-1">
+                            Why now:
+                          </span>
+                          {selected.outreach.why_note}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  <div className="pt-4 border-t border-hairline flex items-center justify-between">
+                    <Link
+                      href={`/company/${selected.id}`}
+                      className="w-full inline-flex items-center justify-center h-9 px-4 rounded-full bg-accent hover:bg-accent/90 text-white text-[13px] font-medium transition-all shadow-xs"
+                    >
+                      Open Full Intelligence Profile →
+                    </Link>
+                  </div>
+                </div>
+          ) : (
+            <div className="rounded-[16px] border border-hairline bg-surface p-8 text-center text-text-muted text-[13px]">
+              Select a company to view intelligence details.
+            </div>
+          )}
+        </div>
+      </div>
 
       {/* Outreach Preview & Copy Modal */}
       {activeModalData && (

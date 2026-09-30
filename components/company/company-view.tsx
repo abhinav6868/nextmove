@@ -108,7 +108,7 @@ export function CompanyView({ company }: CompanyViewProps) {
   const whatToKnow = (extracted.what_to_know_before_approaching as string) || "";
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Top Breadcrumb & Actions */}
       <div className="flex items-center justify-between pb-6 mb-6 border-b border-hairline">
         <Link

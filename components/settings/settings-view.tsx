@@ -67,7 +67,7 @@ export function SettingsView({ initialConfig }: SettingsViewProps) {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="pb-6 mb-6 border-b border-hairline">
         <h1 className="text-[22px] font-semibold text-text tracking-tight">
@@ -79,8 +79,9 @@ export function SettingsView({ initialConfig }: SettingsViewProps) {
       </div>
 
       <form onSubmit={handleSave} className="space-y-6">
-        {/* Output Size (Task 9) */}
-        <div className="rounded-[12px] border border-hairline bg-surface p-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Output Size (Task 9) */}
+          <div className="rounded-[12px] border border-hairline bg-surface p-6 shadow-xs">
           <h3 className="text-[14px] font-semibold text-text mb-1 font-mono uppercase tracking-wider">
             Output Size (Top N Cutoff)
           </h3>
@@ -190,6 +191,7 @@ export function SettingsView({ initialConfig }: SettingsViewProps) {
             </div>
           </div>
         </div>
+      </div>
 
         {/* Save CTA */}
         <div className="flex items-center justify-end gap-3 pt-2">
