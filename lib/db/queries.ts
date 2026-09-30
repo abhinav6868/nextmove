@@ -13,10 +13,28 @@ import { eq, desc, and } from "drizzle-orm";
 import { DEFAULT_CONFIG } from "../config";
 import fallbackData from "./offline-fallback.json";
 
+const isLiveDbAvailable =
+  process.env.NODE_ENV !== "production"
+    ? Boolean(process.env.DATABASE_URL)
+    : Boolean(
+        process.env.DATABASE_URL &&
+          !process.env.DATABASE_URL.includes("localhost") &&
+          !process.env.DATABASE_URL.includes("127.0.0.1")
+      );
+
 /**
  * Get system config value with fallback to defaults
  */
 export async function getConfig<T = unknown>(key: string): Promise<T> {
+  if (!isLiveDbAvailable) {
+    const match = fallbackData.config.find((c) => c.key === key);
+    if (match && match.value !== undefined) return match.value as T;
+    if (key === "top_n") return (DEFAULT_CONFIG.top_n as unknown) as T;
+    if (key === "weights") return (DEFAULT_CONFIG.weights as unknown) as T;
+    if (key === "icp") return (DEFAULT_CONFIG.icp as unknown) as T;
+    return null as T;
+  }
+
   try {
     const row = await db.query.config.findFirst({
       where: eq(config.key, key),
@@ -104,6 +122,10 @@ function getOfflineCompaniesWithScores() {
  * Get all companies with their latest score and top signal
  */
 export async function getCompaniesWithLatestScore() {
+  if (!isLiveDbAvailable) {
+    return getOfflineCompaniesWithScores();
+  }
+
   try {
     const allCompanies = await db
       .select()
@@ -264,6 +286,43 @@ export async function getTodayRankedCompanies(limitN?: number) {
  * Get full company detail with all relations
  */
 export async function getCompanyDetail(id: number) {
+  if (!isLiveDbAvailable) {
+    const company = (fallbackData.companies as any[]).find((c) => c.id === id);
+    if (!company) return null;
+
+    const companySnapshots = (fallbackData.snapshots as any[])
+      .filter((s) => s.company_id === id)
+      .map((s) => ({ ...s, captured_at: new Date(s.captured_at) }));
+
+    const companySignals = (fallbackData.signals as any[])
+      .filter((s) => s.company_id === id)
+      .map((s) => ({ ...s, detected_at: new Date(s.detected_at) }));
+
+    const companyPeople = (fallbackData.people as any[]).filter(
+      (p) => p.company_id === id
+    );
+
+    const companyScores = (fallbackData.scores as any[])
+      .filter((s) => s.company_id === id)
+      .map((s) => ({ ...s, computed_at: new Date(s.computed_at) }));
+
+    const companyOutreach = (fallbackData.outreach as any[])
+      .filter((o) => o.company_id === id)
+      .map((o) => ({ ...o, created_at: new Date(o.created_at) }));
+
+    return {
+      ...company,
+      created_at: new Date(company.created_at),
+      updated_at: new Date(company.updated_at),
+      snapshots: companySnapshots,
+      signals: companySignals,
+      people: companyPeople,
+      score: companyScores[0] || null,
+      scores: companyScores,
+      outreach: companyOutreach[0] || null,
+    };
+  }
+
   try {
     const company = await db.query.companies.findFirst({
       where: eq(companies.id, id),
@@ -347,6 +406,25 @@ export async function getCompanyDetail(id: number) {
  * Get full change feed (signals vs noise)
  */
 export async function getChangeFeed() {
+  if (!isLiveDbAvailable) {
+    return (fallbackData.signals as any[]).map((sig) => {
+      const comp = (fallbackData.companies as any[]).find(
+        (c) => c.id === sig.company_id
+      );
+      return {
+        ...sig,
+        detected_at: new Date(sig.detected_at),
+        company: comp
+          ? {
+              ...comp,
+              created_at: new Date(comp.created_at),
+              updated_at: new Date(comp.updated_at),
+            }
+          : null,
+      };
+    });
+  }
+
   try {
     const allSignals = await db.query.signals.findMany({
       orderBy: desc(signals.detected_at),
@@ -381,6 +459,26 @@ export async function getChangeFeed() {
  * Get execution runs log
  */
 export async function getRunsLog() {
+  if (!isLiveDbAvailable) {
+    return (fallbackData.runs as any[]).map((r) => {
+      const comp = (fallbackData.companies as any[]).find(
+        (c) => c.id === r.company_id
+      );
+      return {
+        ...r,
+        started_at: new Date(r.started_at),
+        finished_at: r.finished_at ? new Date(r.finished_at) : null,
+        company: comp
+          ? {
+              ...comp,
+              created_at: new Date(comp.created_at),
+              updated_at: new Date(comp.updated_at),
+            }
+          : null,
+      };
+    });
+  }
+
   try {
     const allRuns = await db.query.runs.findMany({
       orderBy: desc(runs.started_at),
