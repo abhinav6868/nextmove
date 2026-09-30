@@ -26,7 +26,8 @@ import { getTodayRankedCompanies } from "@/lib/db/queries";
 import { InteractiveHeroDeck } from "@/components/home/interactive-hero-deck";
 import { NextmoveLogo } from "@/components/shared/logo";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function HomePage() {
   const data = await getTodayRankedCompanies(10);
