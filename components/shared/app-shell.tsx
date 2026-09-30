@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Header } from "./header";
+import { MobileBottomNav } from "./mobile-bottom-nav";
 import { CommandPalette } from "./command-palette";
 import { AddCompanyModal } from "./add-company-modal";
 import { useRouter, usePathname } from "next/navigation";
@@ -38,7 +39,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         />
       )}
 
-      <main className="flex-1 w-full">{children}</main>
+      <main className="flex-1 w-full pb-20 sm:pb-8">{children}</main>
+
+      {!isHome && (
+        <MobileBottomNav
+          onOpenCommand={() => setCommandOpen(true)}
+          onAddCompany={() => setAddCompanyOpen(true)}
+        />
+      )}
 
       <CommandPalette
         open={commandOpen}

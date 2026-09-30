@@ -91,7 +91,7 @@ export function InteractiveHeroDeck({ companies }: InteractiveHeroDeckProps) {
       {/* 2-Column Responsive Deck Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-hairline">
         {/* Left Column: Ranked Accounts Stream (5 cols) */}
-        <div className="lg:col-span-5 p-4 sm:p-5 space-y-2.5 bg-surface max-h-[580px] overflow-y-auto">
+        <div className="lg:col-span-5 p-3.5 sm:p-5 space-y-2.5 bg-surface max-h-[340px] sm:max-h-[580px] overflow-y-auto">
           <div className="flex items-center justify-between px-1 pb-1 text-[11px] font-mono text-text-faint uppercase tracking-wider font-semibold">
             <span>Ranked Today</span>
             <span>Score / 100</span>
@@ -300,7 +300,7 @@ export function InteractiveHeroDeck({ companies }: InteractiveHeroDeckProps) {
           </div>
 
           {/* Bottom Card Navigation */}
-          <div className="pt-4 border-t border-hairline flex items-center justify-between">
+          <div className="pt-4 border-t border-hairline flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <Link
               href={`/company/${selected.id}`}
               className="text-[12px] font-mono text-accent hover:underline flex items-center gap-1"
@@ -311,7 +311,7 @@ export function InteractiveHeroDeck({ companies }: InteractiveHeroDeckProps) {
 
             <Link
               href="/today"
-              className="inline-flex items-center justify-center h-8 px-4 rounded-full bg-accent hover:bg-accent/90 text-white text-[12px] font-medium transition-all shadow-xs"
+              className="inline-flex items-center justify-center h-8 px-4 rounded-full bg-accent hover:bg-accent/90 text-white text-[12px] font-medium transition-all shadow-xs w-full sm:w-auto"
             >
               Launch Today&apos;s Deck
             </Link>

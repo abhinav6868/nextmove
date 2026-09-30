@@ -47,33 +47,33 @@ export function ChangesView({ signals }: ChangesViewProps) {
           </p>
         </div>
 
-        <div className="flex items-center gap-1 border border-hairline p-0.5 rounded-full bg-surface">
+        <div className="flex items-center gap-1 border border-hairline p-0.5 rounded-full bg-surface text-[11px] overflow-x-auto max-w-full">
           <button
             onClick={() => setFilterType("all")}
             className={cn(
-              "px-3 py-1 rounded-full text-[11px] font-medium transition-colors cursor-pointer",
+              "px-2.5 sm:px-3 py-1 rounded-full font-medium transition-colors cursor-pointer shrink-0",
               filterType === "all"
                 ? "bg-text text-surface font-semibold"
                 : "text-text-muted hover:text-text"
             )}
           >
-            All Changes ({signals.length})
+            All ({signals.length})
           </button>
           <button
             onClick={() => setFilterType("signals")}
             className={cn(
-              "px-3 py-1 rounded-full text-[11px] font-medium transition-colors cursor-pointer",
+              "px-2.5 sm:px-3 py-1 rounded-full font-medium transition-colors cursor-pointer shrink-0",
               filterType === "signals"
                 ? "bg-text text-surface font-semibold"
                 : "text-text-muted hover:text-text"
             )}
           >
-            Signals Only ({signals.filter((s) => s.is_meaningful).length})
+            Signals ({signals.filter((s) => s.is_meaningful).length})
           </button>
           <button
             onClick={() => setFilterType("noise")}
             className={cn(
-              "px-3 py-1 rounded-full text-[11px] font-medium transition-colors cursor-pointer",
+              "px-2.5 sm:px-3 py-1 rounded-full font-medium transition-colors cursor-pointer shrink-0",
               filterType === "noise"
                 ? "bg-text text-surface font-semibold"
                 : "text-text-muted hover:text-text"

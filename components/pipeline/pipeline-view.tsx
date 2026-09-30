@@ -96,8 +96,73 @@ export function PipelineView({ companies }: PipelineViewProps) {
         </div>
       </div>
 
-      {/* Dense Table */}
-      <div className="rounded-[12px] border border-hairline bg-surface overflow-hidden shadow-xs">
+      {/* Mobile Card List (< sm) */}
+      <div className="sm:hidden space-y-3">
+        {filtered.map((c) => (
+          <div
+            key={c.id}
+            className="rounded-[12px] border border-hairline bg-surface p-4 space-y-3 shadow-xs"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <Link
+                  href={`/company/${c.id}`}
+                  className="font-semibold text-[16px] text-text hover:text-accent transition-colors tracking-tight"
+                >
+                  {c.name}
+                </Link>
+                <div className="flex items-center gap-1.5 mt-0.5 text-[11px] font-mono text-text-muted">
+                  <span>{c.stage}</span>
+                  <span>·</span>
+                  <span>{c.size_band}</span>
+                  <span>·</span>
+                  <span>{c.industry}</span>
+                </div>
+              </div>
+
+              {c.score && (
+                <ScoreBadge score={c.score.total} size="sm" />
+              )}
+            </div>
+
+            {c.topSignal && (
+              <div className="pt-2 border-t border-hairline/60 flex items-center justify-between gap-2">
+                <SignalPill
+                  type={c.topSignal.type}
+                  label={c.topSignal.description.length > 30 ? c.topSignal.description.slice(0, 30) + "..." : c.topSignal.description}
+                />
+                <span className="font-mono text-[10px] text-text-faint shrink-0">
+                  {new Intl.DateTimeFormat("en-US", {
+                    month: "short",
+                    day: "numeric",
+                  }).format(new Date(c.lastChecked))}
+                </span>
+              </div>
+            )}
+
+            <div className="pt-2 flex items-center justify-between text-[12px]">
+              <Link
+                href={`/company/${c.id}`}
+                className="text-accent hover:underline font-medium text-[12px]"
+              >
+                View Full Intel →
+              </Link>
+              <a
+                href={c.url.startsWith("http") ? c.url : `https://${c.url}`}
+                target="_blank"
+                rel="noreferrer"
+                className="text-text-faint hover:text-text text-[11px] font-mono flex items-center gap-1"
+              >
+                <span>Visit site</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Dense Table (Desktop only sm:) */}
+      <div className="hidden sm:block rounded-[12px] border border-hairline bg-surface overflow-hidden shadow-xs">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>

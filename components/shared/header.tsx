@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "./theme-provider";
 import { Kbd } from "@/components/ui/kbd";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Plus, RefreshCw, Zap } from "lucide-react";
+import { Moon, Sun, Plus, RefreshCw, Zap, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NextmoveLogo } from "./logo";
 
@@ -89,7 +89,7 @@ export function Header({
             </button>
           )}
 
-          {/* Command Palette Trigger */}
+          {/* Command Palette Trigger (Desktop pill, Mobile icon) */}
           <button
             onClick={onOpenCommand}
             className="hidden md:flex items-center gap-2 px-2.5 py-1 rounded-full border border-hairline bg-surface hover:bg-surface-2 text-[12px] text-text-muted transition-colors cursor-pointer"
@@ -101,33 +101,50 @@ export function Header({
             </div>
           </button>
 
+          <button
+            onClick={onOpenCommand}
+            aria-label="Search and actions"
+            className="md:hidden p-1.5 rounded-full text-text-muted hover:text-text hover:bg-surface-2 transition-colors cursor-pointer"
+          >
+            <Search className="w-4 h-4" />
+          </button>
+
           {/* Focus Mode Pill Toggle */}
           {onToggleFocus && (
             <button
               onClick={onToggleFocus}
               className={cn(
-                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-medium border transition-colors cursor-pointer",
+                "inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-[12px] font-medium border transition-colors cursor-pointer",
                 focusMode
                   ? "bg-accent/10 border-accent/40 text-accent font-semibold"
                   : "bg-surface border-hairline text-text-muted hover:bg-surface-2"
               )}
             >
               <Zap className="w-3 h-3" />
-              <span>{focusMode ? "Focus: Top 5" : "All: Top 10"}</span>
+              <span>{focusMode ? "Top 5" : "Top 10"}</span>
             </button>
           )}
 
           {/* Add Company Action */}
           {onAddCompany && (
-            <Button
-              size="sm"
-              variant="primary"
-              onClick={onAddCompany}
-              className="hidden sm:inline-flex gap-1"
-            >
-              <Plus className="w-3.5 h-3.5" />
-              <span>Add company</span>
-            </Button>
+            <>
+              <Button
+                size="sm"
+                variant="primary"
+                onClick={onAddCompany}
+                className="hidden sm:inline-flex gap-1"
+              >
+                <Plus className="w-3.5 h-3.5" />
+                <span>Add company</span>
+              </Button>
+              <button
+                onClick={onAddCompany}
+                aria-label="Add company"
+                className="sm:hidden p-1.5 rounded-full bg-accent text-white hover:bg-accent/90 transition-colors shadow-xs active:scale-95"
+              >
+                <Plus className="w-3.5 h-3.5" />
+              </button>
+            </>
           )}
 
           {/* Theme Toggle */}

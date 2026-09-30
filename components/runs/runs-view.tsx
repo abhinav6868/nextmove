@@ -50,8 +50,116 @@ export function RunsView({ runs }: RunsViewProps) {
         </p>
       </div>
 
-      {/* Runs Table */}
-      <div className="rounded-[12px] border border-hairline bg-surface overflow-hidden shadow-xs">
+      {/* Mobile Card List (< sm) */}
+      <div className="sm:hidden space-y-3">
+        {runs.map((r) => {
+          const logs = (Array.isArray(r.log) ? r.log : []) as PipelineLogItem[];
+          const isExpanded = expandedRunId === r.id;
+          const formattedDate = new Intl.DateTimeFormat("en-US", {
+            month: "short",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          }).format(new Date(r.started_at));
+
+          return (
+            <div
+              key={r.id}
+              className="rounded-[12px] border border-hairline bg-surface p-4 space-y-3 shadow-xs"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <div className="font-mono text-[11px] text-text-faint">
+                    RUN #{String(r.id).padStart(4, "0")} · {formattedDate}
+                  </div>
+                  <div className="font-semibold text-[16px] text-text mt-0.5">
+                    {r.company ? (
+                      <Link
+                        href={`/company/${r.company.id}`}
+                        className="hover:text-accent transition-colors"
+                      >
+                        {r.company.name}
+                      </Link>
+                    ) : (
+                      "Batch Refresh"
+                    )}
+                  </div>
+                </div>
+
+                <span
+                  className={cn(
+                    "inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono text-[11px] font-medium border",
+                    r.status === "completed" &&
+                      "bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/30",
+                    r.status === "running" &&
+                      "bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/30",
+                    r.status === "failed" &&
+                      "bg-red-500/10 text-red-700 dark:text-red-400 border-red-500/30"
+                  )}
+                >
+                  {r.status === "completed" && (
+                    <CheckCircle2 className="w-3 h-3 text-green-500" />
+                  )}
+                  {r.status === "running" && (
+                    <Clock className="w-3 h-3 animate-spin text-blue-500" />
+                  )}
+                  {r.status === "failed" && (
+                    <AlertCircle className="w-3 h-3 text-red-500" />
+                  )}
+                  <span className="capitalize">{r.status}</span>
+                </span>
+              </div>
+
+              <div className="pt-2 border-t border-hairline/60 flex items-center justify-between text-[12px]">
+                <button
+                  onClick={() => toggleExpand(r.id)}
+                  className="text-text-muted hover:text-text font-mono inline-flex items-center gap-1 cursor-pointer"
+                >
+                  <span>{isExpanded ? "Hide Steps" : `View ${logs.length > 0 ? logs.length : 6} Steps`}</span>
+                  <ChevronDown
+                    className={cn(
+                      "w-3.5 h-3.5 transition-transform duration-200",
+                      isExpanded && "rotate-180"
+                    )}
+                  />
+                </button>
+
+                {r.company && (
+                  <Link
+                    href={`/company/${r.company.id}`}
+                    className="text-accent hover:underline font-medium text-[12px]"
+                  >
+                    Target Intel →
+                  </Link>
+                )}
+              </div>
+
+              {isExpanded && (
+                <div className="pt-2 border-t border-hairline/60 space-y-1.5 font-mono text-[11px]">
+                  {logs.length === 0 ? (
+                    <p className="text-text-muted">
+                      Standard automated workflow execution.
+                    </p>
+                  ) : (
+                    logs.map((step, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center justify-between py-1 border-b border-hairline/40 last:border-0"
+                      >
+                        <span className="text-text">{step.step}</span>
+                        <span className="text-text-faint">{step.duration_ms || 240}ms</span>
+                      </div>
+                    ))
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Runs Table (Desktop only sm:) */}
+      <div className="hidden sm:block rounded-[12px] border border-hairline bg-surface overflow-hidden shadow-xs">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>

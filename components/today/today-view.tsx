@@ -396,6 +396,90 @@ export function TodayView({
                     <ChevronRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
+
+                {/* Mobile Inline Intel Panel (revealed on mobile when selected) */}
+                {isSelected && (
+                  <div className="lg:hidden mt-4 pt-4 border-t border-hairline/70 space-y-3.5">
+                    {/* Scoring Breakdown */}
+                    <div className="p-3.5 rounded-[10px] bg-surface-2/60 border border-hairline space-y-2.5">
+                      <div className="flex items-center justify-between text-[11px] font-mono text-text-faint">
+                        <span className="uppercase font-semibold tracking-wider">
+                          Opportunity Scoring
+                        </span>
+                        <span>Confidence: {company.score?.confidence || "Medium"}</span>
+                      </div>
+
+                      <div className="space-y-1.5 text-[11px] font-mono">
+                        <div className="flex justify-between text-text-muted">
+                          <span>Timing (35%): {company.score?.timing || 85}/100</span>
+                          <span>Fit (35%): {company.score?.fit || 80}/100</span>
+                          <span>Reach (30%): {company.score?.reach || 80}/100</span>
+                        </div>
+                        <div className="w-full h-1.5 rounded-full bg-surface overflow-hidden flex">
+                          <div
+                            className="h-full bg-accent rounded-full"
+                            style={{ width: `${company.score?.timing || 85}%` }}
+                          />
+                        </div>
+                      </div>
+
+                      {company.score?.reasoning && (
+                        <p className="text-[12px] text-text-muted italic leading-relaxed pt-1">
+                          &quot;{company.score.reasoning}&quot;
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Decision Maker Persona */}
+                    {company.person && (
+                      <div className="p-3.5 rounded-[10px] bg-surface-2/40 border border-hairline space-y-1 text-[12px]">
+                        <div className="text-[10px] font-mono uppercase tracking-wider text-text-faint font-semibold">
+                          Identified Decision-Maker
+                        </div>
+                        <div className="font-semibold text-text">
+                          {company.person.name || company.person.role}
+                        </div>
+                        <div className="text-[11px] font-mono text-text-muted">
+                          {company.person.role} · {company.person.persona}
+                        </div>
+                        <div className="text-text-muted text-[12px] leading-relaxed pt-1">
+                          {company.person.persona_reason}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Outreach Pitch Draft */}
+                    {company.outreach && (
+                      <div className="p-3.5 rounded-[10px] bg-accent/5 border border-accent/20 space-y-2">
+                        <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-accent font-semibold">
+                          <span>3-Sentence Outreach Pitch</span>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleCopyDraft(company.id, company.outreach!.draft);
+                            }}
+                            className="inline-flex items-center gap-1 text-[11px] text-accent hover:underline font-mono normal-case cursor-pointer"
+                          >
+                            {copiedId === company.id ? (
+                              <>
+                                <Check className="w-3 h-3 text-green-500" />
+                                <span>Copied</span>
+                              </>
+                            ) : (
+                              <>
+                                <Copy className="w-3 h-3" />
+                                <span>Copy Draft</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
+                        <p className="text-[12px] text-text font-serif leading-relaxed whitespace-pre-wrap bg-surface/80 p-2.5 rounded-[6px] border border-hairline/60">
+                          {company.outreach.draft}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
               </Card>
             );
           })
